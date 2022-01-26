@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Teko:wght@300;400;500;600;700&display=swap');
+
+html, body {
+    margin: 0 auto;
+    height: 100%;
+    padding: 0;
+    border: none;
+    font-family: Teko, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.grid {
+    width: 37.5rem;
+    height: 37.5rem;
+}
+
+.square {
+    width: 12.5rem;
+    height: 12.5rem;
+    border: solid grey 0.5rem
+}
