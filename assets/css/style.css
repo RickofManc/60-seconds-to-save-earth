@@ -22,3 +22,8 @@ html, body {
     height: 12.5rem;
     border: solid grey 0.25rem
 }
+
+.power-station {
+    background-image: url(assets/images/power-station.png);
+    background-size: cover;
+}
