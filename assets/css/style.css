@@ -11,12 +11,14 @@ html, body {
 }
 
 .grid {
-    width: 37.5rem;
-    height: 37.5rem;
+    width: 39rem;
+    height: 39rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .square {
     width: 12.5rem;
     height: 12.5rem;
-    border: solid grey 0.5rem
+    border: solid grey 0.25rem
 }
