@@ -24,6 +24,5 @@ html, body {
 }
 
 .coal {
-    background-image: url("assets/images/power-station.png");
-    background-size: cover;
+    background-color: hotpink;
 }
