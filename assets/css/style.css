@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
-html, body {
+body {
     margin: 0 auto;
-    height: 100%;
     padding: 0;
     border: none;
     font-family: Teko, sans-serif;
@@ -12,34 +11,32 @@ html, body {
     background-color: #c70039;
 }
 
-.header {
-    position: top;
-    height: 10rem;
+header {
+    height: auto;
     width: 100%;
     background-color: #fff;
-    font-size: 3rem;
-    font-weight: 800;
+    margin: 0 0 2rem 0;
     text-align: center;
 }
 
-.score {
-    position: relative;
-    height: 8rem;
-    width: 16rem;
-    font-size: 2rem;
-    font-weight: 600;
+
+.game-title {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0.25rem;
+    margin: 0 0 0.25rem 0;
+    font-size: 3rem;
     text-transform: uppercase;
-    background-color: #fff;
 }
 
-.time-left {
-    position: relative;
-    height: 8rem;
-    width: 24rem;
-    font-size: 2rem;
-    font-weight: 600;
+.score, .time-left {
+    display: inline-block;
+    height: auto;
+    width: 14rem;
     text-transform: uppercase;
-    background-color: #fff;
+    font-size: 2rem;
+    margin: 0 0.25rem;
 }
 
 .grid {
