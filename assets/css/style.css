@@ -2,6 +2,7 @@
 
 body {
     margin: 0 auto;
+    height: auto;
     padding: 0;
     border: none;
     font-family: Teko, sans-serif;
@@ -12,6 +13,7 @@ body {
 }
 
 header {
+    position: fixed;
     height: auto;
     width: 100%;
     background-color: #fff;
@@ -55,4 +57,15 @@ header {
 
 .coal {
     background-color: hotpink;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    background-color: #fff;
+    margin: 2rem 0 0 0;
+    font-size: 2rem;
+    text-align: center;
 }
