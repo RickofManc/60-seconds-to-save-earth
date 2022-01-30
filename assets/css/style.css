@@ -8,8 +8,38 @@ html, body {
     font-family: Teko, sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    background-image: url("assets/images/body-background-image-start-game.jpg");
+    background-image: url("assets/images/body-background-image-start-game.webp");
     background-color: #c70039;
+}
+
+.header {
+    position: top;
+    height: 10rem;
+    width: 100%;
+    background-color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.score {
+    position: relative;
+    height: 8rem;
+    width: 16rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.time-left {
+    position: relative;
+    height: 8rem;
+    width: 24rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #fff;
 }
 
 .grid {
@@ -17,6 +47,7 @@ html, body {
     height: 39rem;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .square {
