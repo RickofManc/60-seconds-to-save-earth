@@ -8,6 +8,8 @@ html, body {
     font-family: Teko, sans-serif;
     font-size: 1rem;
     font-weight: 400;
+    background-image: url("assets/images/body-background-image-start-game.jpg");
+    background-color: #c70039;
 }
 
 .grid {
