@@ -9,7 +9,7 @@ body {
     font-family: Teko, sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    background-image: url("assets/images/body-background-image-start-game.webp");
+    background-image: url(assets/images/body-background-image-start-game.webp);
     background-color: #c70039;
 }
 
@@ -67,7 +67,8 @@ header {
 }
 
 .coal {
-    background-color: hotpink;
+    background-image: url(assets/images/power-station-144px.png);
+    background-size: cover;
 }
 
 footer {
