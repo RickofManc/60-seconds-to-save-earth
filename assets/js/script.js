@@ -1,21 +1,33 @@
-/*
-// Start game pop-up screen
-Swal.fire({
-    title: 'The years is 2035...',
-    text: 'all attempts by world leaders to end profiting on fossil fuels have failed. You are the last hope and have just 60 seconds to hit back with renewable energy sources to save earth!',
-    confirmButtonText: 'Start Game',
-})*/
-
 // Start of code for main game area
 const squares = document.querySelectorAll('.square');
 const coal = document.querySelector('.coal');
 const timeLeft = document.querySelector('#time-left');
 const score = document.querySelector('#score');
 
+const startButton = document.querySelector(".start-button");
+const modal = document.querySelector(".modal");
+const highScore = document.querySelector(".high-score");
+const gameOver = document.querySelector(".game-over-text");
+const windTurbine = document.querySelector(".wind-turbine");
+
 let result = 0;
-let hitPosition;
+let hitPosition
 let currentTime = 60;
 let timerId = null;
+let countDownTimerId = setInterval(countDown, 1000);
+
+
+// Start Game button functionality
+
+startButton.addEventListener("click",() => {
+    modal.classList.add("modalclose");
+    function moveCoal() {
+        timerId = setInterval(randomSquare, 700);
+    }
+    moveCoal();
+});
+
+
 
 // Code to pop-up the coal image on random grid squares
 function randomSquare() {
@@ -40,13 +52,6 @@ squares.forEach(square => {
 });
 
 
-// Add timerID to button to start the game here
-function moveCoal() {
-    timerId = setInterval(randomSquare, 700);
-}
-
-moveCoal();
-
 // Game countdown function and Game Over pop-up screen
 function countDown() {
     currentTime--;
@@ -57,11 +62,11 @@ function countDown() {
         clearInterval(timerId);
         Swal.fire({
             title: 'You did it!',
-            text: 'By stopping {$result} Power Stations burning fossil fuels, Earth is saved for another billion years. Remember to promote Renewable Energy and Go Green in everything you do!',
+            text: 'By stopping ${result} Power Stations burning fossil fuels, Earth is saved for another billion years. Remember to promote Renewable Energy and Go Green in everything you do!',
             confirmButtonText: 'Play Again'
         })
     }
 }
 
-let countDownTimerId = setInterval(countDown, 1000);
+
 

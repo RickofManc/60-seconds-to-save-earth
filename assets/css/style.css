@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 body {
-    max-width: 2600px;
+    max-width: 2200px;
     margin: 0;
     height: 100%;
     padding: 0;
@@ -44,6 +44,7 @@ header {
 .modal {
     cursor: default;
     position: absolute;
+    z-index: 10000;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -54,7 +55,7 @@ header {
 }
 
 .start-game-screen-div {
-    width: 40%;
+    width: 30%;
     height: auto;
     color: #fff;
     font-size: 3rem;
@@ -62,10 +63,15 @@ header {
     margin: 0.5rem;
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .game-over-text {
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
     text-transform: uppercase;
     font-size: 3rem;
     color: #fff;
@@ -78,6 +84,7 @@ header {
     border: 0.25rem solid #c0e218;
     font-size: 3rem;
     cursor: pointer;
+    transition: 0.5s ease;
     font-family: 'teko';
     text-transform: uppercase;
 }
@@ -86,6 +93,12 @@ header {
     background: #c0e218;
     transition: 0.5s ease;
 }
+
+.modalclose {
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 .high-score-text {
     display: flex;
@@ -97,7 +110,8 @@ header {
     text-transform: uppercase;
 }
 
-.game-over-result {
+.high-score {
+    margin-left: 10px;
     animation: scorepump 0.5s ease infinite alternate;
 }
 
@@ -131,15 +145,12 @@ header {
 .square {
     width: 10rem;
     height: 10rem;
-    --border: solid grey 0.25rem;
+    border: solid grey 0.25rem;
     margin: 0.25rem;    
 }
 
 .coal {
     background: url("../images/power-station-144px.png") no-repeat center;
-    object-fit: contain;
-    pointer-events: all;
-    z-index: -1;
 }
 
 footer {
