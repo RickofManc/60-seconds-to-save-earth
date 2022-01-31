@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 body {
-    margin: 0 auto;
-    height: auto;
+    max-width: 2600px;
+    margin: 0;
+    height: 100%;
     padding: 0;
     border: none;
     font-family: Teko, sans-serif;
@@ -20,7 +21,6 @@ header {
     margin: 0 0 2rem 0;
     text-align: center;
 }
-
 
 .game-title {
     display: block;
@@ -41,18 +41,29 @@ header {
     margin: 0 0.25rem;
 }
 
+.game-area-div {
+    display: inline-block;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .grid {
-    width: 39rem;
-    height: 39rem;
+    width: 34rem;
+    height: 34rem;
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 .square {
-    width: 12.5rem;
-    height: 12.5rem;
-    border: solid grey 0.25rem
+    width: 10rem;
+    height: 10rem;
+    border: solid grey 0.25rem;
+    margin: 0.25rem;    
 }
 
 .coal {
