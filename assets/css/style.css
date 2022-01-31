@@ -51,38 +51,63 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: #111d5e;
+}
+
+.start-game-screen-div {
+    width: 40%;
+    height: auto;
+    color: #fff;
+    font-size: 3rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.game-over-text {
+    visibility: hidden;
+    text-transform: uppercase;
+    font-size: 3rem;
     color: #fff;
 }
 
-.modal button:hover {
-    background: #C0E218;
+.modal button {
+    padding: 0.5rem;
+    background-color: #fff;
     color: #111d5e;
+    border: 0.25rem solid #c0e218;
+    font-size: 3rem;
+    cursor: pointer;
+    font-family: 'teko';
+    text-transform: uppercase;
 }
 
-.modal h1 {
+.modal button:hover {
+    background: #c0e218;
+    transition: 0.5s ease;
+}
+
+.high-score-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
 }
 
-.modal h2 {
-    visibility: hidden;
+.game-over-result {
+    animation: scorepump 0.5s ease infinite alternate;
 }
 
-.result {
-    margin-left: 6rem;
-    animation: scorebump 0.5s ease infinite alternate;
-}
-
-@keyframes scorebump {
+@keyframes scorepump {
     from {
-        transform: translateY(6rem);
+        transform: translateY(0.5rem);
     }
     to {
-        transform: translateY(-6rem);
+        transform: translateY(-0.5rem);
     }
-    
 }
 
 .game-area-div {
