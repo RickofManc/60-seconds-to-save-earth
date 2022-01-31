@@ -1,8 +1,10 @@
+/*
+// Start game pop-up screen
 Swal.fire({
-    text: 'The year is 2035, all attempts by world leaders to end their profiting on fossil fuels have failed. <br> You are the last hope and have just 60 seconds to hit back with aa renewable energy source and save Earth!',
-    confirmButtonText: 'Start'
-})
-
+    title: 'The years is 2035...',
+    text: 'all attempts by world leaders to end profiting on fossil fuels have failed. You are the last hope and have just 60 seconds to hit back with renewable energy sources to save earth!',
+    confirmButtonText: 'Start Game',
+})*/
 
 // Start of code for main game area
 const squares = document.querySelectorAll('.square');
@@ -45,7 +47,7 @@ function moveCoal() {
 
 moveCoal();
 
-// Add alert to game over card
+// Game countdown function and Game Over pop-up screen
 function countDown() {
     currentTime--;
     timeLeft.textContent = currentTime;
@@ -53,12 +55,13 @@ function countDown() {
     if (currentTime == 0) {
         clearInterval(countDownTimerId);
         clearInterval(timerId);
-        alert('You did it! By stopping {$result} Power Stations burning fossil fuels, Earth is saved for another billion years. Remember to promote Renewable Energy and Go Green in everything you do!');
+        Swal.fire({
+            title: 'You did it!',
+            text: 'By stopping {$result} Power Stations burning fossil fuels, Earth is saved for another billion years. Remember to promote Renewable Energy and Go Green in everything you do!',
+            confirmButtonText: 'Play Again'
+        })
     }
 }
 
 let countDownTimerId = setInterval(countDown, 1000);
-
-
-
 

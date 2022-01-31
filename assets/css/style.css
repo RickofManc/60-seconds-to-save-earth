@@ -6,10 +6,11 @@ body {
     height: 100%;
     padding: 0;
     border: none;
-    font-family: Teko, sans-serif;
+    font-family: 'Teko', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     background: url("../images/body-background-image-start-game.webp") #c70039 no-repeat center;
+    overflow: hidden;
 }
 
 header {
@@ -40,6 +41,50 @@ header {
     margin: 0 0.25rem;
 }
 
+.modal {
+    cursor: default;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #111d5e;
+    color: #fff;
+}
+
+.modal button:hover {
+    background: #C0E218;
+    color: #111d5e;
+}
+
+.modal h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.modal h2 {
+    visibility: hidden;
+}
+
+.result {
+    margin-left: 6rem;
+    animation: scorebump 0.5s ease infinite alternate;
+}
+
+@keyframes scorebump {
+    from {
+        transform: translateY(6rem);
+    }
+    to {
+        transform: translateY(-6rem);
+    }
+    
+}
+
 .game-area-div {
     display: inline-block;
     align-content: center;
@@ -61,12 +106,15 @@ header {
 .square {
     width: 10rem;
     height: 10rem;
-    border: solid grey 0.25rem;
+    --border: solid grey 0.25rem;
     margin: 0.25rem;    
 }
 
 .coal {
     background: url("../images/power-station-144px.png") no-repeat center;
+    object-fit: contain;
+    pointer-events: all;
+    z-index: -1;
 }
 
 footer {
