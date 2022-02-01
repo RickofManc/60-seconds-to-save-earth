@@ -183,7 +183,7 @@
   -webkit-overflow-scrolling: touch;
 }
 .swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
-  background: rgba(0, 0, 0, 0.4);
+  background: #111d5e;
 }
 .swal2-container.swal2-backdrop-hide {
   background: transparent !important;
@@ -254,19 +254,18 @@
 .swal2-container.swal2-no-transition {
   transition: none !important;
 }
-
 .swal2-popup {
   display: none;
   position: relative;
   box-sizing: border-box;
   grid-template-columns: minmax(0, 100%);
-  width: 32em;
+  width: 40%;
   max-width: 100%;
-  padding: 0 0 1.25em;
-  border: none;
-  border-radius: 5px;
+  padding: 1.5rem;
+  border: 0.25rem solid #c0e218;
+  border-radius: 0;
   background: #fff;
-  color: #545454;
+  color: #111d5e;
   font-family: inherit;
   font-size: 1rem;
 }
@@ -283,7 +282,7 @@
   margin: 0;
   padding: 0.8em 1em 0;
   color: inherit;
-  font-size: 1.875em;
+  font-size: 3rem;
   font-weight: 600;
   text-align: center;
   text-transform: none;
@@ -337,12 +336,14 @@
   cursor: pointer;
 }
 .swal2-styled.swal2-confirm {
-  border: 0;
-  border-radius: 0.25em;
+  border: 0.25rem solid #c0e218;
+  border-radius: 0;
+  padding: 0.5rem;
+  margin: 0.5rem;
   background: initial;
-  background-color: #7066e0;
-  color: #fff;
-  font-size: 1em;
+  background-color: #fff;
+  color: #111d5e;
+  font-size: 2rem;
 }
 .swal2-styled.swal2-confirm:focus {
   box-shadow: 0 0 0 3px rgba(112, 102, 224, 0.5);
