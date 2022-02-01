@@ -14,7 +14,7 @@ let result = 0;
 let hitPosition
 let currentTime = 60;
 let timerId = null;
-let countDownTimerId = setInterval(countDown, 1000);
+
 
 
 // Start Game button functionality
@@ -27,7 +27,7 @@ startButton.addEventListener("click",() => {
     moveCoal();
 });
 
-
+let countDownTimerId = setInterval(countDown, 1000);
 
 // Code to pop-up the coal image on random grid squares
 function randomSquare() {
@@ -44,6 +44,10 @@ function randomSquare() {
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPosition) {
+            setTimeout(() => {
+                document.body.classList.toggle("flash");
+            }, 50);
+            document.body.classList.toggle("flash");
             result++;
             score.textContent = result;
             hitPosition = null;
@@ -67,6 +71,7 @@ function countDown() {
         })
     }
 }
+
 
 
 

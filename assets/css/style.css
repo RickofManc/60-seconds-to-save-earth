@@ -91,6 +91,10 @@ header {
     pointer-events: none;
 }
 
+.flash {
+    background: #c0e218;
+}
+
 .game-over-text {
     visibility: hidden;
 }
