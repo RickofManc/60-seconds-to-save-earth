@@ -183,7 +183,7 @@
   -webkit-overflow-scrolling: touch;
 }
 .swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
-  background: #111d5e;
+  background-image: url('../images/game-over-background.webp');
 }
 .swal2-container.swal2-backdrop-hide {
   background: transparent !important;
@@ -259,7 +259,7 @@
   position: relative;
   box-sizing: border-box;
   grid-template-columns: minmax(0, 100%);
-  width: 40%;
+  width: 50%;
   max-width: 100%;
   padding: 1.5rem;
   border: 0.25rem solid #c0e218;
@@ -338,12 +338,13 @@
 .swal2-styled.swal2-confirm {
   border: 0.25rem solid #c0e218;
   border-radius: 0;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin: 0.5rem;
   background: initial;
   background-color: #fff;
   color: #111d5e;
-  font-size: 2rem;
+  font-family: 'teko';
+  font-size: 3rem;
 }
 .swal2-styled.swal2-confirm:focus {
   box-shadow: 0 0 0 3px rgba(112, 102, 224, 0.5);
@@ -454,8 +455,8 @@
   padding: 0;
   overflow: auto;
   color: inherit;
-  font-size: 1.125em;
-  font-weight: normal;
+  font-size: 3rem;
+  font-weight: 600;
   line-height: normal;
   text-align: center;
   word-wrap: break-word;
@@ -821,7 +822,7 @@
 }
 
 [class^=swal2] {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: #c0e218;
 }
 
 .swal2-show {
