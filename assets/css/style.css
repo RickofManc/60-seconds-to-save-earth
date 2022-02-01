@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
-body {
-    max-width: 2200px;
+html, body {
+    max-width: 2600px;
     margin: 0;
-    height: 100%;
+    height: 100vh;
     padding: 0;
     border: none;
     font-family: 'Teko', sans-serif;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
     background: url("../images/body-background-image-start-game.webp") #c70039 no-repeat center;
-    overflow: hidden;
 }
 
 header {
@@ -44,7 +44,8 @@ header {
 .modal {
     cursor: default;
     position: absolute;
-    z-index: 10000;
+    top: 0;
+    z-index: 100;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -55,11 +56,10 @@ header {
 }
 
 .start-game-screen-div {
-    width: 30%;
-    height: auto;
     color: #fff;
-    font-size: 3rem;
-    padding: 0.5rem;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding: 1.5rem;
     margin: 0.5rem;
     align-items: center;
     text-align: center;
@@ -68,17 +68,9 @@ header {
     justify-content: space-around;
 }
 
-.game-over-text {
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    text-transform: uppercase;
-    font-size: 3rem;
-    color: #fff;
-}
-
 .modal button {
     padding: 0.5rem;
+    margin: 0.5rem;
     background-color: #fff;
     color: #111d5e;
     border: 0.25rem solid #c0e218;
@@ -99,18 +91,22 @@ header {
     pointer-events: none;
 }
 
+.game-over-text {
+    visibility: hidden;
+}
 
-.high-score-text {
+.high-score-text, .game-over-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
+    margin: 0.5rem;
     font-size: 3rem;
     color: #fff;
     text-transform: uppercase;
 }
 
-.high-score {
+#high-score {
     margin-left: 10px;
     animation: scorepump 0.5s ease infinite alternate;
 }
