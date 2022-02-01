@@ -3,7 +3,6 @@ const squares = document.querySelectorAll('.square');
 const coal = document.querySelector('.coal');
 const timeLeft = document.querySelector('#time-left');
 const score = document.querySelector('#score');
-
 const startButton = document.querySelector(".start-button");
 const modal = document.querySelector(".modal");
 const highScore = document.querySelector(".high-score");
@@ -11,11 +10,11 @@ const gameOver = document.querySelector(".game-over-text");
 const windTurbine = document.querySelector(".wind-turbine");
 
 let result = 0;
+let maxScore = 0;
 let hitPosition
-let currentTime = 60;
+let currentTime = 10;
 let timerId = null;
-
-
+let countDownTimerId = setInterval(countDown, 1000);
 
 // Start Game button functionality
 
@@ -27,19 +26,18 @@ startButton.addEventListener("click",() => {
     moveCoal();
 });
 
-let countDownTimerId = setInterval(countDown, 1000);
+
 
 // Code to pop-up the coal image on random grid squares
 function randomSquare() {
     squares.forEach(square => {
         square.classList.remove('coal');
     });
-
     let randomSquare = squares[Math.floor(Math.random() * 9)];
     randomSquare.classList.add('coal');
-
     hitPosition = randomSquare.id;
 }
+
 // Code to increase score with every hit
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
@@ -60,18 +58,17 @@ squares.forEach(square => {
 function countDown() {
     currentTime--;
     timeLeft.textContent = currentTime;
-
     if (currentTime == 0) {
         clearInterval(countDownTimerId);
         clearInterval(timerId);
         Swal.fire({
-            title: 'You did it!',
-            text: 'By stopping ${result} Power Stations burning fossil fuels, Earth is saved for another billion years. Remember to promote Renewable Energy and Go Green in everything you do!',
-            confirmButtonText: 'Play Again'
-        })
-    }
-}
-
-
-
-
+            title: 'CONGRATULATIONS! YOU STOPPED '+'${score} '+'POWER STATIONS BEING BUILT. EARTH IS SAVED FOR ANOTHER 10 YEARS PLAY AGAIN TO GIVE US MORE TIME!',
+            confirmButtonText: 'Play Again',
+            confirmButtonColor: '#111d5e',
+            allowOutsideClick: false,
+            allowEscapeKey: false
+            }).then(function() {
+                window.location = "index.html";
+            })
+            }
+        }
