@@ -5,12 +5,9 @@ const timeLeft = document.querySelector('#time-left');
 const score = document.querySelector('#score');
 const startButton = document.querySelector(".start-button");
 const modal = document.querySelector(".modal");
-const highScore = document.querySelector(".high-score");
-const gameOver = document.querySelector(".game-over-text");
 const windTurbine = document.querySelector(".wind-turbine");
 
 let result = 0;
-let maxScore = 0;
 let hitPosition
 let currentTime = 10;
 let timerId = null;
