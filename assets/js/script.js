@@ -57,9 +57,9 @@ function countDown() {
         clearInterval(countDownTimerId);
         clearInterval(timerId);
         Swal.fire({
-            title: 'CONGRATULATIONS! YOU STOPPED '+result+' POWER STATIONS BEING BUILT.',
-            text: 'EARTH IS SAVED FOR ANOTHER 10 YEARS, PLAY AGAIN TO GIVE US MORE TIME!',
-            confirmButtonText: 'PLAY AGAIN',
+            title: 'Yes!! You prevented '+result+' power stations from being built.',
+            text: 'Earth is saved for 50 years, play again to give us more time!',
+            confirmButtonText: 'Play Again',
             allowOutsideClick: false,
             allowEscapeKey: false
             }).then(function() {

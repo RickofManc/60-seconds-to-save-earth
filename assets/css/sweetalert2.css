@@ -462,6 +462,7 @@
   text-align: center;
   word-wrap: break-word;
   word-break: break-word;
+  text-transform: none;
 }
 
 .swal2-input,
