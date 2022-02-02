@@ -15,8 +15,14 @@ let hitPosition
 let currentTime = 10;
 let timerId = null;
 
-// Code to pop-up the coal image on random grid squares
-function randomSquare() {
+// Wait for the DOM to finish loading before running the game
+// Get the button elements and add event listeners to them
+/*document.addEventListener("DOMContentLoaded", function())*/
+
+/** 
+ * In-game function randomising which square the Power Station appears
+ */
+ function randomSquare() {
     squares.forEach(square => {
         square.classList.remove('coal');
     });
@@ -25,7 +31,11 @@ function randomSquare() {
     hitPosition = randomSquare.id;
 }
 
-// Code to provide a feedback flash and increase score with every hit
+/** 
+ * In-game function following a hit on a Power Station
+ * Feedback on the hit is provided by a screen 'flash'
+ * User score is incremented by 1
+ */
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPosition) {
@@ -40,7 +50,12 @@ squares.forEach(square => {
     });
 });
 
-// Start Game button functionality
+/*
+* Start game function
+* Awaits the user clicking 'Start Game' button
+* Modal opening screen disappears
+* Game starts with a Power Station appearing randomly every 700ms
+*/
 startButton.addEventListener("click",() => {
     modal.classList.add("modalclose");
     function moveCoal() {
@@ -49,7 +64,12 @@ startButton.addEventListener("click",() => {
     moveCoal();
 });
 
-// Game countdown function and trigger for End Game Sweet Alert pop-up screen
+/* 
+* In-game timer countdown function
+* From 30s to 0
+* At 0 timer is cleared
+* At 0 Sweet Alert triggers informing of final score
+*/
 function countDown() {
     currentTime--;
     timeLeft.textContent = currentTime;
