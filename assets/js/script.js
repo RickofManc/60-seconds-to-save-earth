@@ -62,7 +62,7 @@ function countDown() {
         clearInterval(countDownTimerId);
         clearInterval(timerId);
         Swal.fire({
-            title: 'CONGRATULATIONS! YOU STOPPED '+'${score} '+'POWER STATIONS BEING BUILT',
+            title: 'CONGRATULATIONS! YOU STOPPED '+'${score} '+'POWER STATIONS BEING BUILT.',
             text: 'EARTH IS SAVED FOR ANOTHER 10 YEARS, PLAY AGAIN TO GIVE US MORE TIME!',
             confirmButtonText: 'PLAY AGAIN',
             allowOutsideClick: false,

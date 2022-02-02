@@ -16,48 +16,17 @@ body {
     font-size: 1rem;
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
-}
-
-body {
+    letter-spacing: 0.05rem;
     background: url('../images/new-in-game-background.webp') no-repeat center #c70039;
     background-size: cover;
 }
 
-header {
-    display: block;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: auto;
-    background-color: rgba(255,255,255,0.40);
-    margin: 0 0 2rem 0;
-    text-align: center;
-    align-items: center;
-}
-
-.game-title {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 0.25rem;
-    margin: 0 0 0.25rem 0;
-    font-size: 4rem;
-}
-
-.score, .time-left {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0.25rem;
-    font-size: 3rem;
-}
-
+/* Opening page styles */
 .modal {
     cursor: default;
     position: absolute;
     top: 0;
-    z-index: 100;
+    z-index: 10000;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -66,10 +35,10 @@ header {
     align-items: center;
     background-color: #111d5e;
 }
-
 .start-game-screen-div {
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
     text-transform: uppercase;
     padding: 1.5rem;
     margin: 0.5rem;
@@ -80,62 +49,57 @@ header {
     justify-content: space-around;
 }
 
+/* Game start button styles */
 .modal button {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     margin: 0.5rem;
     background-color: #fff;
     color: #111d5e;
     border: 0.25rem solid #c0e218;
-    font-size: 3rem;
     cursor: pointer;
-    transition: 0.5s ease;
     font-family: 'teko';
+    font-size: 2rem;
+    font-weight: 400;
     text-transform: uppercase;
 }
-
 .modal button:hover {
     background: #c0e218;
     transition: 0.5s ease;
 }
-
 .modalclose {
     opacity: 0;
     pointer-events: none;
 }
 
-.flash {
-    background: #c0e218;
-}
-
-.game-over-text {
-    visibility: hidden;
-}
-
-.high-score-text, .game-over-text {
-    display: flex;
+/* In-game page header styles */
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255,255,255,0.40);
+    margin: 0 0 1rem 0;
+    text-align: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem;
-    margin: 0.5rem;
+}
+.game-title {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0.25rem;
+    margin: 0.5rem auto 0;
     font-size: 3rem;
-    color: #fff;
-    text-transform: uppercase;
+}
+.score, .time-left {
+    display: inline-block;
+    width: 18rem;
+    height: auto;
+    margin: 0.25rem;
+    font-size: 2rem;
 }
 
-#high-score {
-    margin-left: 10px;
-    animation: scorepump 0.5s ease infinite alternate;
-}
-
-@keyframes scorepump {
-    from {
-        transform: translateY(0.5rem);
-    }
-    to {
-        transform: translateY(-0.5rem);
-    }
-}
-
+/* Game area styles for the Power Stations to pop-up */
 .game-area-div {
     display: inline-block;
     align-content: center;
@@ -144,7 +108,6 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .grid {
     width: 34rem;
     height: 34rem;
@@ -154,24 +117,30 @@ header {
     justify-content: center;
 }
 
+/* Individual grid squares with border removed to reduce user expectancy of pop-up's */
 .square {
     width: 10rem;
     height: 10rem;
     --border: solid grey 0.25rem;
     margin: 0.25rem;    
 }
-
+/* Power Station styles */
 .coal {
     background: url("../images/power-station-144px.png") no-repeat center;
 }
+/* Flash effect to feedback to users that a hit has been registered */
+.flash {
+    background: #c0e218;
+}
 
+/* In-game page Footer styles */
 footer {
     position: fixed;
     bottom: 0;
     height: 10%;
     width: 100%;
     background-color: rgba(255,255,255,0.40);
-    margin: 2rem 0 0 0;
-    font-size: 3rem;
+    margin: 1rem 0 0 0;
+    font-size: 2rem;
     text-align: center;
 }
