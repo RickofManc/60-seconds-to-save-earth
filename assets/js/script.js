@@ -14,19 +14,6 @@ let maxScore = 0;
 let hitPosition
 let currentTime = 10;
 let timerId = null;
-let countDownTimerId = setInterval(countDown, 1000);
-
-// Start Game button functionality
-
-startButton.addEventListener("click",() => {
-    modal.classList.add("modalclose");
-    function moveCoal() {
-        timerId = setInterval(randomSquare, 700);
-    }
-    moveCoal();
-});
-
-
 
 // Code to pop-up the coal image on random grid squares
 function randomSquare() {
@@ -38,7 +25,7 @@ function randomSquare() {
     hitPosition = randomSquare.id;
 }
 
-// Code to increase score with every hit
+// Code to provide a feedback flash and increase score with every hit
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPosition) {
@@ -53,8 +40,16 @@ squares.forEach(square => {
     });
 });
 
+// Start Game button functionality
+startButton.addEventListener("click",() => {
+    modal.classList.add("modalclose");
+    function moveCoal() {
+        timerId = setInterval(randomSquare, 700);
+    }
+    moveCoal();
+});
 
-// Game countdown function and Game Over pop-up screen
+// Game countdown function and trigger for End Game Sweet Alert pop-up screen
 function countDown() {
     currentTime--;
     timeLeft.textContent = currentTime;
@@ -62,7 +57,7 @@ function countDown() {
         clearInterval(countDownTimerId);
         clearInterval(timerId);
         Swal.fire({
-            title: 'CONGRATULATIONS! YOU STOPPED '+'${score} '+'POWER STATIONS BEING BUILT.',
+            title: 'CONGRATULATIONS! YOU STOPPED '+result+' POWER STATIONS BEING BUILT.',
             text: 'EARTH IS SAVED FOR ANOTHER 10 YEARS, PLAY AGAIN TO GIVE US MORE TIME!',
             confirmButtonText: 'PLAY AGAIN',
             allowOutsideClick: false,
@@ -72,3 +67,5 @@ function countDown() {
             })
             }
         }
+
+let countDownTimerId = setInterval(countDown, 1000);
