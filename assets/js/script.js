@@ -30,12 +30,12 @@ function randomSquare() {
     hitPosition = randomSquare.id;
 }
 
+// Credit to Kod Aktif for the flash effect that provides user feedback on a successful hit
 /** 
  * In-game function following a hit on a Power Station
  * Feedback on the hit is provided by a screen 'flash'
  * User score is incremented by 1
  */
-// Credit to Kod Aktif for the flash effect that provides user feedback on a successful hit
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPosition) {
@@ -64,13 +64,13 @@ startButton.addEventListener("click",() => {
     moveCoal();
 });
 
+// Credit to Sweet Alert 2 for providing the 'Swal' customisable alert code
 /* 
 * In-game timer countdown function
 * From 30s to 0
 * At 0 timer is cleared
 * At 0 Sweet Alert triggers informing of final score
 */
-// Credit to Sweet Alert 2 for providing the 'Swal' customisable alert code
 function countDown() {
     currentTime--;
     timeLeft.textContent = currentTime;

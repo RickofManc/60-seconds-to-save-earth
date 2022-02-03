@@ -9,30 +9,23 @@ html {
 body {
     max-width: 2600px;
     margin: 0;
-    height: 100vh;
+    height: auto;
     padding: 0;
     border: none;
     font-family: 'Teko', sans-serif;
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.2rem;
-    
 }
 
-/* Image for in-game background */
-.in-game-background {
-    background: url('../images/in-game-background.webp') no-repeat center #f37121;
-    background-size: cover;
-}
-
-/* Opening page styles */
+/* Game intro page styles */
 .modal {
     cursor: default;
     position: absolute;
     top: 0;
     z-index: 10000;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -51,8 +44,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
 }
-
-/* Game start button styles */
+/* Game intro start button styles */
 .modal button {
     padding: 0.5rem 1rem;
     margin: 0.5rem;
@@ -73,9 +65,21 @@ body {
     pointer-events: none;
 }
 
+/* In-game page styles */
+.in-game-page-div {
+    display: contents;
+    position: absolute;
+}
+.in-game-page-background {
+    position: absolute;
+    background: no-repeat center #f37121;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+}
 /* In-game page header styles */
 header {
-    display: block;
+    display: relative;
     position: fixed;
     top: 0;
     width: 100%;
@@ -135,18 +139,6 @@ header {
     background: #c0e218;
 }
 
-/* In-game page Footer styles */
-footer {
-    position: fixed;
-    bottom: 0;
-    height: 10%;
-    width: 100%;
-    background-color: rgba(255,255,255,0.40);
-    margin: 1rem 0 0 0;
-    font-size: 2rem;
-    text-align: center;
-}
-
 /* 404 Error page style */
 .error-page-div {
     display: contents;
@@ -158,7 +150,6 @@ footer {
     width: 100%;
     height: auto;
     top: 0;
-    left: 0;
 }
 .error-page-text {
     position: relative;
