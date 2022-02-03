@@ -1,4 +1,4 @@
-// Start of code for main game area
+// Declarations for manipulating the DOM
 const squares = document.querySelectorAll('.square');
 const coal = document.querySelector('.coal');
 const timeLeft = document.querySelector('#time-left');
@@ -12,7 +12,8 @@ let hitPosition;
 let currentTime = 10;
 let timerId = null;
 
-let sound = new Audio("assets/sounds/score.wav")
+let hit = new Audio("assets/sounds/score.wav")
+let swipe = new Audio("assets/sounds/swipe.wav")
 
 // Credit to Ania Kubow for providing the learning for game play functionality
 
@@ -32,21 +33,38 @@ function randomSquare() {
 	hitPosition = randomSquare.id;
 }
 
+/** 
+ * In-game function randomising which square the Power Station appears
+ */
+window.addEventListener("mousemove",(e) => {
+    windTurbine.style.left = e.pageX + "px";
+    windTurbine.style.top = e.pageY - 60 + "px";
+});
+
 // Credit to Kod Aktif for the flash and sound effects that provides user feedback on a successful hit
 /** 
  * In-game function following a hit on a Power Station
- * Feedback on the hit is provided by a screen 'flash'
+ * Feedback on the hit is provided by a screen 'flash' and a 'hit' sound
+ * Sound times reset to zero to ensure each hit has a sound
+ * The wind turbine icon rotates to imitate a hitting action
  * User score is incremented by 1
  */
 squares.forEach(square => {
 	square.addEventListener('mousedown', () => {
-		if (square.id == hitPosition) {
+		windTurbine.style.transform = "rotateZ(-50deg) rotateY (-180deg)";
+        swipe.play();
+        swipe.currentTime = 0;
+        setTimeout(() => {
+            windTurbine.style.transform ="rotateZ(0deg) rotateY(-180deg)";
+        }, 40);
+        
+        if (square.id == hitPosition) {
 			setTimeout(() => {
 				document.body.classList.toggle("flash");
 			}, 50);
 			document.body.classList.toggle("flash");
-            sound.play();
-            sound.currentTime = 0;
+            hit.play()
+            hit.currentTime = 0
 			result++;
 			score.textContent = result;
 			hitPosition = null;
@@ -72,7 +90,7 @@ startButton.addEventListener("click", () => {
 // Credit to Sweet Alert 2 for providing the 'Swal' customisable alert code
 /* 
  * In-game timer countdown function
- * From 30s to 0
+ * From 60 seconds to 0
  * At 0 timer is cleared
  * At 0 Sweet Alert triggers informing of final score
  */

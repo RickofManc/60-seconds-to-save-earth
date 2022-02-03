@@ -622,7 +622,7 @@
   border-color: #000;
   font-family: inherit;
   line-height: 5em;
-  cursor: default;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
