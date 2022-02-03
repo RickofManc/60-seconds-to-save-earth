@@ -12,6 +12,8 @@ let hitPosition;
 let currentTime = 10;
 let timerId = null;
 
+let sound = new Audio("assets/sounds/score.wav")
+
 // Credit to Ania Kubow for providing the learning for game play functionality
 
 // Wait for the DOM to finish loading before running the game
@@ -30,7 +32,7 @@ function randomSquare() {
 	hitPosition = randomSquare.id;
 }
 
-// Credit to Kod Aktif for the flash effect that provides user feedback on a successful hit
+// Credit to Kod Aktif for the flash and sound effects that provides user feedback on a successful hit
 /** 
  * In-game function following a hit on a Power Station
  * Feedback on the hit is provided by a screen 'flash'
@@ -43,6 +45,8 @@ squares.forEach(square => {
 				document.body.classList.toggle("flash");
 			}, 50);
 			document.body.classList.toggle("flash");
+            sound.play();
+            sound.currentTime = 0;
 			result++;
 			score.textContent = result;
 			hitPosition = null;
