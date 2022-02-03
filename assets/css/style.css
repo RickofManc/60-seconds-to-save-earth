@@ -1,178 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 html {
-    margin: 0 auto;
-    padding: 0;
-    border: none;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
 }
-
 body {
-    max-width: 2600px;
-    margin: 0;
-    height: auto;
-    padding: 0;
-    border: none;
-    font-family: 'Teko', sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 0.2rem;
+  max-width: 2600px;
+  margin: 0;
+  height: auto;
+  padding: 0;
+  border: none;
+  font-family: 'Teko', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
 }
-
 /* Game intro page styles */
 .modal {
-    cursor: default;
-    position: absolute;
-    top: 0;
-    z-index: 10000;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #111d5e;
+  cursor: default;
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #111d5e;
 }
 .start-game-screen-div {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 500;
-    padding: 1.5rem;
-    margin: 0.5rem;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 /* Game intro start button styles */
 .modal button {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    background-color: #fff;
-    color: #111d5e;
-    border: 0.25rem solid #c0e218;
-    cursor: pointer;
-    font-family: 'teko';
-    font-size: 2rem;
-    font-weight: 500;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: #fff;
+  color: #111d5e;
+  border: 0.25rem solid #c0e218;
+  cursor: pointer;
+  font-family: 'teko';
+  font-size: 2rem;
+  font-weight: 500;
 }
 .modal button:hover {
-    background: #c0e218;
-    transition: 0.5s ease;
+  background: #c0e218;
+  transition: 0.5s ease;
 }
 .modalclose {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
-
 /* In-game page styles */
 .in-game-page-div {
-    display: contents;
-    position: absolute;
+  display: contents;
+  position: absolute;
 }
 .in-game-page-background {
-    position: absolute;
-    background: no-repeat center #f37121;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
+  position: absolute;
+  background: no-repeat center #f37121;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 /* In-game page header styles */
 header {
-    display: relative;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: auto;
-    background-color: rgba(255,255,255,0.40);
-    margin: 0 0 1rem 0;
-    text-align: center;
-    align-items: center;
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 1rem 0;
+  text-align: center;
+  align-items: center;
 }
 .game-title {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 0.25rem;
-    margin: 0.5rem auto 0;
-    font-size: 3rem;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0.25rem;
+  margin: 0.5rem auto 0;
+  font-size: 3rem;
 }
-.score, 
+.score,
 .time-left {
-    display: inline-block;
-    width: 18rem;
-    height: auto;
-    margin: 0.25rem;
-    font-size: 2rem;
+  display: inline-block;
+  width: 18rem;
+  height: auto;
+  margin: 0.25rem;
+  font-size: 2rem;
 }
-
 /* Game area styles for the Power Stations to pop-up */
 .game-area-div {
-    display: inline-block;
-    align-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: inline-block;
+  align-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .grid {
-    width: 34rem;
-    height: 34rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  width: 34rem;
+  height: 34rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 /* Individual grid squares with border removed to reduce user expectancy of pop-up's */
 .square {
-    width: 10rem;
-    height: 10rem;
-    --border: solid grey 0.25rem;
-    margin: 0.25rem;    
+  width: 10rem;
+  height: 10rem;
+  --border: solid grey 0.25rem;
+  margin: 0.25rem;
 }
 /* Power Station styles */
 .coal {
-    background: url("../images/power-station-144px.png") no-repeat center;
+  background: url("../images/power-station-144px.png") no-repeat center;
 }
 /* Flash effect that provides user feedback on a successful hit */
 .flash {
-    background: #c0e218;
+  background: #c0e218;
 }
-
 /* 404 Error page style */
 .error-page-div {
-    display: contents;
-    position: absolute;
+  display: contents;
+  position: absolute;
 }
 .error-page-background {
-    position: absolute;
-    background: no-repeat center #171d29;
-    width: 100%;
-    height: auto;
-    top: 0;
+  position: absolute;
+  background: no-repeat center #171d29;
+  width: 100%;
+  height: auto;
+  top: 0;
+  overflow: hidden;
 }
 .error-page-text {
-    position: relative;
-    text-align: left;
-    margin: 1rem;
-    color: #fff;
-    font-weight: 400;
+  position: relative;
+  text-align: left;
+  margin: 1rem;
+  color: #fff;
+  font-weight: 400;
 }
 .error-page-button button {
-    position: relative;
-    padding: 0.5rem 1rem;
-    margin: 1rem;
-    background-color: #fff;
-    color: #111d5e;
-    border: 0.25rem solid #c0e218;
-    cursor: pointer;
-    font-family: 'teko';
-    font-size: 2rem;
-    font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  background-color: #fff;
+  color: #111d5e;
+  border: 0.25rem solid #c0e218;
+  cursor: pointer;
+  font-family: 'teko';
+  font-size: 2rem;
+  font-weight: 500;
 }
 .error-page-button button:hover {
-    background: #c0e218;
-    transition: 0.5s ease;
+  background: #c0e218;
+  transition: 0.5s ease;
 }
 
 

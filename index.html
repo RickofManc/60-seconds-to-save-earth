@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The year is 2035, Earth continues to burn-up, play this fun arcade style game to hit back with a renewable energy source."/>
-    <meta name="keywords" content="climate change, fossil fuels, arcade, game, whac-a-mole, earth, environment, learning"/>
-    <meta name="author" content="Rick Atherton"/>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/sweetalert2.css">
-    <link rel='shortcut icon' type='image/x-icon' href="assets/images/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The year is 2035, Earth continues to burn-up, play this fun arcade style game to hit back with a renewable energy source."
+    />
+    <meta
+      name="keywords"
+      content="climate change, fossil fuels, arcade, game, whac-a-mole, earth, environment, learning"
+    />
+    <meta name="author" content="Rick Atherton" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/sweetalert2.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.png"
+    />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+        </style>
     <title>60 Seconds to Save Earth</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Main content section -->
     <div class="in-game-page-div">
-        <img width="2600" height="1670" class="in-game-page-background" src="assets/images/in-game-background.webp" alt="Background image showing land dried and cracking due to the suns heat"/>
-        <!-- Opening screen with game instructions and start button -->
-        <div class="modal">
-            <div class="start-game-screen-div">
-                <p class="intro-text">The year is 2035...<br>
-                    all attempts to stop profiting from fossil fuels have failed.<br>
-                    Climate change is nearly out of control, earth is burning up!<br>
-                    You have 60 seconds to stop power stations being built,<br>
-                    hit back with renewable energy...<br>
-                    Can you Save Earth?
-                </p>
-                <button class="start-button">Start Game
-                </button>
-            </div>
+      <img
+        width="2600"
+        height="1670"
+        class="in-game-page-background"
+        src="assets/images/in-game-background.webp"
+        alt="Background image showing land dried and cracking due to the suns heat"
+      />
+      <!-- Opening screen with game instructions and start button -->
+      <div class="modal">
+        <div class="start-game-screen-div">
+          <p class="intro-text">
+            The year is 2035...<br />
+            all attempts to stop profiting from fossil fuels have failed.<br />
+            Climate change is nearly out of control, earth is burning up!<br />
+            You have 60 seconds to stop power stations being built,<br />
+            hit back with renewable energy...<br />
+            Can you Save Earth?
+          </p>
+          <button class="start-button">Start Game</button>
         </div>
-        <!-- In-game page header for Title, Score and Time Left -->
-        <header>   
-            <h1 class="game-title">60 Seconds to Save Earth!
-            </h1>
-            <h2 class="score">Score: <span id="score">0
-                </span>
-            </h2>
-            <h2 class="time-left">Time Left: <span id="time-left">60
-                </span>
-            </h2>
-        </header>
-        <!-- In-game grid where the Power Stations pop-up -->    
-        <div class="game-area-div">    
-            <div class="grid">
-                <div class="square" id="1"></div>
-                <div class="square" id="2"></div>
-                <div class="square" id="3"></div>
-                <div class="square" id="4"></div>
-                <div class="square" id="5"></div>
-                <div class="square" id="6"></div>
-                <div class="square" id="7"></div>
-                <div class="square" id="8"></div>
-                <div class="square" id="9"></div>
-            </div>
+      </div>
+      <!-- In-game page header for Title, Score and Time Left -->
+      <header>
+        <h1 class="game-title">60 Seconds to Save Earth!</h1>
+        <h2 class="score">Score: <span id="score">0 </span></h2>
+        <h2 class="time-left">Time Left: <span id="time-left">60 </span></h2>
+      </header>
+      <!-- In-game grid where the Power Stations pop-up -->
+      <div class="game-area-div">
+        <div class="grid">
+          <div class="square" id="1"></div>
+          <div class="square" id="2"></div>
+          <div class="square" id="3"></div>
+          <div class="square" id="4"></div>
+          <div class="square" id="5"></div>
+          <div class="square" id="6"></div>
+          <div class="square" id="7"></div>
+          <div class="square" id="8"></div>
+          <div class="square" id="9"></div>
         </div>
-    </div>        
+      </div>
+    </div>
     <!-- Script tags for link to JavaScript file and 'Sweet Alert' for start and end game pop-up cards -->
-    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/js/sweetalert2.js"></script>
     <script type="module" src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>

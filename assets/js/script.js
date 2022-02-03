@@ -8,7 +8,7 @@ const modal = document.querySelector(".modal");
 const windTurbine = document.querySelector(".wind-turbine");
 
 let result = 0;
-let hitPosition
+let hitPosition;
 let currentTime = 10;
 let timerId = null;
 
@@ -22,12 +22,12 @@ let timerId = null;
  * In-game function randomising which square the Power Station appears
  */
 function randomSquare() {
-    squares.forEach(square => {
-        square.classList.remove('coal');
-    });
-    let randomSquare = squares[Math.floor(Math.random() * 9)];
-    randomSquare.classList.add('coal');
-    hitPosition = randomSquare.id;
+	squares.forEach(square => {
+		square.classList.remove('coal');
+	});
+	let randomSquare = squares[Math.floor(Math.random() * 9)];
+	randomSquare.classList.add('coal');
+	hitPosition = randomSquare.id;
 }
 
 // Credit to Kod Aktif for the flash effect that provides user feedback on a successful hit
@@ -37,56 +37,57 @@ function randomSquare() {
  * User score is incremented by 1
  */
 squares.forEach(square => {
-    square.addEventListener('mousedown', () => {
-        if (square.id == hitPosition) {
-            setTimeout(() => {
-                document.body.classList.toggle("flash");
-            }, 50);
-            document.body.classList.toggle("flash");
-            result++;
-            score.textContent = result;
-            hitPosition = null;
-        }
-    });
+	square.addEventListener('mousedown', () => {
+		if (square.id == hitPosition) {
+			setTimeout(() => {
+				document.body.classList.toggle("flash");
+			}, 50);
+			document.body.classList.toggle("flash");
+			result++;
+			score.textContent = result;
+			hitPosition = null;
+		}
+	});
 });
 
 /*
-* Start game function
-* Awaits the user clicking 'Start Game' button
-* Modal opening screen disappears
-* Game starts with a Power Station appearing randomly every 700ms
-*/
-startButton.addEventListener("click",() => {
-    modal.classList.add("modalclose");
-    function moveCoal() {
-        timerId = setInterval(randomSquare, 700);
-    }
-    moveCoal();
+ * Start game function
+ * Awaits the user clicking 'Start Game' button
+ * Modal opening screen disappears
+ * Game starts with a Power Station appearing randomly every 700ms
+ */
+startButton.addEventListener("click", () => {
+	modal.classList.add("modalclose");
+
+	function moveCoal() {
+		timerId = setInterval(randomSquare, 700);
+	}
+	moveCoal();
 });
 
 // Credit to Sweet Alert 2 for providing the 'Swal' customisable alert code
 /* 
-* In-game timer countdown function
-* From 30s to 0
-* At 0 timer is cleared
-* At 0 Sweet Alert triggers informing of final score
-*/
+ * In-game timer countdown function
+ * From 30s to 0
+ * At 0 timer is cleared
+ * At 0 Sweet Alert triggers informing of final score
+ */
 function countDown() {
-    currentTime--;
-    timeLeft.textContent = currentTime;
-    if (currentTime == 0) {
-        clearInterval(countDownTimerId);
-        clearInterval(timerId);
-        Swal.fire({
-            title: 'Yes!! You prevented '+result+' power stations from being built.',
-            text: 'Earth is saved for 50 years, play again to give us more time!',
-            confirmButtonText: 'Play Again',
-            allowOutsideClick: false,
-            allowEscapeKey: false
-            }).then(function() {
-                window.location = "index.html";
-            })
-            }
-        }
+	currentTime--;
+	timeLeft.textContent = currentTime;
+	if (currentTime == 0) {
+		clearInterval(countDownTimerId);
+		clearInterval(timerId);
+		Swal.fire({
+			title: 'Yes!! You prevented ' + result + ' power stations from being built.',
+			text: 'Earth is saved for 50 years, play again to give us more time!',
+			confirmButtonText: 'Play Again',
+			allowOutsideClick: false,
+			allowEscapeKey: false
+		}).then(function() {
+			window.location = "index.html";
+		});
+	}
+}
 
 let countDownTimerId = setInterval(countDown, 1000);

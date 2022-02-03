@@ -11,7 +11,7 @@
 
 ## About
 
-Climate Change requires a tremendous amount of global focus if humanity is to redirect the trajectory to burn up Earth. It is therefore imperative to educate all generations of the environmental damage caused by burning fossil fuels such as coal. This browser based, arcade style game aims to make learning fun with an objective to combat the building of more coal burning Power Stations with renewable energy in the form of a Wind Turbine.
+Slowing Climate Change requires a tremendous amount of global focus and effort if humanity is to prevent the Earth from prematurely burning up. One way to support this challenge is through education. A key cause of Climate Change is the dependency on burning fossil fuels, such as coal. I've created a game to raise awareness of this issue, aiming to make learning fun. The objective is to stop the building of more coal burning Power Stations with renewable energy, in the form of a Wind Turbine. 
 
 
 ***

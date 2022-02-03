@@ -7,5 +7,7 @@
         "scorepump",
         "Swal",
         "sweetalert"
-    ]
+    ],
+    "html.hover.references": false,
+    "css.hover.references": false
 }
