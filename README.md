@@ -109,17 +109,7 @@ As part of this phase wireframes for all screens have produced using [Balsamiq](
 
 Consideration was given to both desktop and mobiles users with media queries used to ensure the game can be played on any device.
 
-#### Game Intro
-
-
-
-#### In-game
-
-
-
-#### End Game
-
-
+![Wireframes](readme-images/wireframes.png)
 
 
 
