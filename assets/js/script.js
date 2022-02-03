@@ -12,6 +12,8 @@ let hitPosition
 let currentTime = 10;
 let timerId = null;
 
+// Credit to Ania Kubow for providing the learning for game play functionality
+
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 /*document.addEventListener("DOMContentLoaded", function())*/
@@ -19,7 +21,7 @@ let timerId = null;
 /** 
  * In-game function randomising which square the Power Station appears
  */
- function randomSquare() {
+function randomSquare() {
     squares.forEach(square => {
         square.classList.remove('coal');
     });
@@ -33,6 +35,7 @@ let timerId = null;
  * Feedback on the hit is provided by a screen 'flash'
  * User score is incremented by 1
  */
+// Credit to Kod Aktif for the flash effect that provides user feedback on a successful hit
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPosition) {
@@ -67,6 +70,7 @@ startButton.addEventListener("click",() => {
 * At 0 timer is cleared
 * At 0 Sweet Alert triggers informing of final score
 */
+// Credit to Sweet Alert 2 for providing the 'Swal' customisable alert code
 function countDown() {
     currentTime--;
     timeLeft.textContent = currentTime;

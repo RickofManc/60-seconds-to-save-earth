@@ -125,7 +125,7 @@ header {
 .coal {
     background: url("../images/power-station-144px.png") no-repeat center;
 }
-/* Flash effect to feedback to users that a hit has been registered */
+/* Flash effect that provides user feedback on a successful hit */
 .flash {
     background: #c0e218;
 }

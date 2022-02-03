@@ -142,17 +142,20 @@ I have selected the free to use font 'Teko' from Google Fonts as the design has 
 To provide an arcade style to the game vector images and icons were used throughout the website.
 
 ![Fossil Fuels Burning](assets/images/power-station-144px.png)
+
 The 'Power Station' icon used to represent fossil fuels was sourced free for commercial use through [Pixabay](https://pixabay.com/vectors/power-station-electricity-3664263/) with credit due to designer Jerzy Gorecki.
 
 ![Renewable Energy](assets/images/wind-turbine.png)
+
 The 'Wind Turbine' icon used to hit back at the Power Stations was also sourced free for commercial use through [Pixabay](https://pixabay.com/vectors/wind-turbine-wind-renewable-energy-1894024/) with credit due to designer Laurence Ledanois.
 
 The 'In-game' background vector is sourced from [Adobe Stock](https://stock.adobe.com/uk/images/drought-concept-desert-landscape-rocks-and-stone/318820031) and being used under the paid for Standard License.
 
 The 'End Game' background vector was sourced free for commercial use from [Freepik](https://www.freepik.com/free-vector/wind-turbine-long-road-scene-dam-background_11250726.htm#&position=0&from_view=collections) with attribution credit due to the Designer brgfx.
 
-![Burning Earth](assets/images/favicon.png)
 The 'Favicon' has been sourced for free commercial use from [Raw Pixel](https://www.rawpixel.com/image/2904421/free-illustration-png-fire-planet-pollution).
+
+![Burning Earth](assets/images/favicon.png)
 
 ***
 
@@ -160,7 +163,7 @@ The 'Favicon' has been sourced for free commercial use from [Raw Pixel](https://
 
 ### Universal Features
 
-Consistent features to ensure user feels at home, without adding unnecessary complication. for instance expectancy to see a header and footer with key information
+****Consistent features to ensure user feels at home, without adding unnecessary complication. for instance expectancy to see a header  with key information
 
 ##### In-game
 wind-turbine, flash, audio
