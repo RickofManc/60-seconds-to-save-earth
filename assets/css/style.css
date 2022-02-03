@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 html {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     border: none;
 }
@@ -16,6 +16,11 @@ body {
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.2rem;
+    
+}
+
+/* Image for in-game background */
+.in-game-background {
     background: url('../images/in-game-background.webp') no-repeat center #f37121;
     background-size: cover;
 }
@@ -141,3 +146,42 @@ footer {
     font-size: 2rem;
     text-align: center;
 }
+
+/* 404 Error page style */
+.error-page-div {
+    display: contents;
+    position: absolute;
+}
+.error-page-background {
+    position: absolute;
+    background: no-repeat center #171d29;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+.error-page-text {
+    position: relative;
+    text-align: left;
+    margin: 1rem;
+    color: #fff;
+    font-weight: 400;
+}
+.error-page-button button {
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    background-color: #fff;
+    color: #111d5e;
+    border: 0.25rem solid #c0e218;
+    cursor: pointer;
+    font-family: 'teko';
+    font-size: 2rem;
+    font-weight: 500;
+}
+.error-page-button button:hover {
+    background: #c0e218;
+    transition: 0.5s ease;
+}
+
+

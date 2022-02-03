@@ -157,6 +157,8 @@ The 'Favicon' has been sourced for free commercial use from [Raw Pixel](https://
 
 ![Burning Earth](assets/images/favicon.png)
 
+The '404 Page' background vector is sourced from [Adobe Stock](https://stock.adobe.com/uk/Library/urn:aaid:sc:EU:817bd93c-48b0-4709-a9ae-459b0d2bb485?asset_id=437603661) and being used under the paid for Standard License.
+
 ***
 
 ## Features
