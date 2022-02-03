@@ -1,6 +1,6 @@
 # 60-seconds-to-save-earth
 
-![Website Mockup](readme-images/60-secs-to-save-earth.PNG)
+![Website Mockup](readme-images/60-secs-to-save-earth.png)
 
 [Link to Live Website](https://rickofmanc.github.io/60-seconds-to-save-earth/)
 
@@ -52,7 +52,7 @@ The game is targeted at a wide user base, starting from school children where co
 
 The roadmap below highlights the high-level strategic opportunities versus the importance and viability/feasibility of development for the MVP (Minimal Viable Product):
 
-![Strategic Opportunities Roadmap](readme-images/strategic-opportunities-roadmap.PNG)
+![Strategic Opportunities Roadmap](readme-images/strategic-opportunities-roadmap.png)
 
 
 ### Scope
@@ -137,10 +137,22 @@ I have selected the free to use font 'Teko' from Google Fonts as the design has 
 ![Save Earth Game Font](readme-images/save-earth-game-teko-font.png)
 
 
-#### Imagery 
+#### Images & Icons
 
-To ensure the game was released for the agreed MVP launch date, it wasn't feasible to create the in-game background image that would see each Power Station pop-up on an level part of the horizon. Therefore a decision was taken to use free images from online sources, namely [Vecteezy](https://www.vecteezy.com/).
+To provide an arcade style to the game vector images and icons were used throughout the website.
 
+![Fossil Fuels Burning](assets/images/power-station-144px.png)
+The 'Power Station' icon used to represent fossil fuels was sourced free for commercial use through [Pixabay](https://pixabay.com/vectors/power-station-electricity-3664263/) with credit due to designer Jerzy Gorecki.
+
+![Renewable Energy](assets/images/wind-turbine.png)
+The 'Wind Turbine' icon used to hit back at the Power Stations was also sourced free for commercial use through [Pixabay](https://pixabay.com/vectors/wind-turbine-wind-renewable-energy-1894024/) with credit due to designer Laurence Ledanois.
+
+The 'In-game' background vector is sourced from [Adobe Stock](https://stock.adobe.com/uk/images/drought-concept-desert-landscape-rocks-and-stone/318820031) and being used under the paid for Standard License.
+
+The 'End Game' background vector was sourced free for commercial use from [Freepik](https://www.freepik.com/free-vector/wind-turbine-long-road-scene-dam-background_11250726.htm#&position=0&from_view=collections) with attribution credit due to the Designer brgfx.
+
+![Burning Earth](assets/images/favicon.png)
+The 'Favicon' has been sourced for free commercial use from [Raw Pixel](https://www.rawpixel.com/image/2904421/free-illustration-png-fire-planet-pollution).
 
 ***
 
@@ -241,7 +253,6 @@ Further details on completing the final step can be found on GitHub's ['Fork a R
 ### People
 
 * Mentor Brian Macharia for guiding and advising throughout the projects lifecycle.
-* Ania Kubow and Kod Aktif as sources of learning JavaScript code that provides some of the game functionality.
 * Code Institute Slack community for peer reviewing the website.
 
 ### Software & Web Applications
@@ -263,7 +274,7 @@ Further details on completing the final step can be found on GitHub's ['Fork a R
 ### Code
 
 * [Sweet Alerts](https://sweetalert.js.org/) - For being a beautiful replacement for a browser alert at the end of the game.
-* YouTubers Ania Kubow and Kod Aktif as sources of learning JavaScript code that has provided some of the game functionality.
+* YouTubers Ania Kubow [game-play] and Kod Aktif [effects] as sources of learning JavaScript code that has provided some of the game functionality.
 
 
 ### Inspiration
