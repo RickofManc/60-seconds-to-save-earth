@@ -9,17 +9,13 @@ const windTurbine = document.querySelector(".wind-turbine");
 
 let result = 0;
 let hitPosition;
-let currentTime = 10;
+let currentTime = 60;
 let timerId = null;
 
 let hit = new Audio("assets/sounds/score.wav")
 let swipe = new Audio("assets/sounds/swipe.wav")
 
 // Credit to Ania Kubow for providing the learning for game play functionality
-
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
-/*document.addEventListener("DOMContentLoaded", function())*/
 
 /** 
  * In-game function randomising which square the Power Station appears
@@ -51,11 +47,11 @@ window.addEventListener("mousemove",(e) => {
  */
 squares.forEach(square => {
 	square.addEventListener('mousedown', () => {
-		windTurbine.style.transform = "rotateZ(-50deg) rotateY (-180deg)";
+		windTurbine.style.transform = "rotateZ(50deg) rotateY (-180deg)";
         swipe.play();
         swipe.currentTime = 0;
         setTimeout(() => {
-            windTurbine.style.transform ="rotateZ(0deg) rotateY(-180deg)";
+            windTurbine.style.transform ="rotateZ(-45deg) rotateY(-180deg)";
         }, 40);
         
         if (square.id == hitPosition) {
