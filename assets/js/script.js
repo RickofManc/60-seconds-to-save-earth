@@ -11,6 +11,7 @@ let result = 0;
 let hitPosition;
 let currentTime = 20;
 let timerId = null;
+let countDownTimerId;
 
 let hit = new Audio('assets/sounds/score.wav');
 let swipe = new Audio('assets/sounds/swipe.wav');
@@ -81,10 +82,22 @@ startButton.addEventListener('click', () => {
 	modal.classList.add('modalclose');
 	let countDownTimerId = setInterval(countDown, 1000);
 	function moveCoal() {
-		timerId = setInterval(randomSquare, 700);
+		timerId = setInterval(randomSquare, 900);
 	}
 	moveCoal();
+	/** 
+ 	* In-game function randomising which square the Power Station appears
+ 	*/
+	function randomSquare() {
+		squares.forEach(square => {
+			square.classList.remove('coal');
+		});
+		let randomSquare = squares[Math.floor(Math.random() * 9)];
+		randomSquare.classList.add('coal');
+		hitPosition = randomSquare.id;
+	}
 });
+
 /** 
  * In-game function randomising which square the Power Station appears
  */
