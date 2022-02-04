@@ -3,39 +3,19 @@ const squares = document.querySelectorAll('.square');
 const coal = document.querySelector('.coal');
 const timeLeft = document.querySelector('#time-left');
 const score = document.querySelector('#score');
-const startButton = document.querySelector(".start-button");
-const modal = document.querySelector(".modal");
-const windTurbine = document.querySelector(".wind-turbine");
+const startButton = document.querySelector('.start-button');
+const modal = document.querySelector('.modal');
+const windTurbine = document.querySelector('.wind-turbine');
 
 let result = 0;
 let hitPosition;
-let currentTime = 60;
+let currentTime = 20;
 let timerId = null;
 
-let hit = new Audio("assets/sounds/score.wav")
-let swipe = new Audio("assets/sounds/swipe.wav")
+let hit = new Audio('assets/sounds/score.wav');
+let swipe = new Audio('assets/sounds/swipe.wav');
 
 // Credit to Ania Kubow for providing the learning for game play functionality
-
-/** 
- * In-game function randomising which square the Power Station appears
- */
-function randomSquare() {
-	squares.forEach(square => {
-		square.classList.remove('coal');
-	});
-	let randomSquare = squares[Math.floor(Math.random() * 9)];
-	randomSquare.classList.add('coal');
-	hitPosition = randomSquare.id;
-}
-
-/** 
- * In-game function waiting for the mouse to position the wind turbine
- */
-window.addEventListener("mousemove",(e) => {
-    windTurbine.style.left = e.pageX + "px";
-    windTurbine.style.top = e.pageY - 60 + "px";
-});
 
 // Credit to Kod Aktif for the flash and sound effects that provides user feedback on a successful hit
 /** 
@@ -47,42 +27,26 @@ window.addEventListener("mousemove",(e) => {
  */
 squares.forEach(square => {
 	square.addEventListener('mousedown', () => {
-		windTurbine.style.transform = "rotateZ(50deg) rotateY (-180deg)";
+		windTurbine.style.transform = 'rotateZ(50deg) rotateY (-180deg)';
         swipe.play();
         swipe.currentTime = 0;
         setTimeout(() => {
-            windTurbine.style.transform ="rotateZ(-45deg) rotateY(-180deg)";
+            windTurbine.style.transform ='rotateZ(-45deg) rotateY(-180deg)';
         }, 40);
         
         if (square.id == hitPosition) {
 			setTimeout(() => {
-				document.body.classList.toggle("flash");
+				document.body.classList.toggle('flash');
 			}, 50);
-			document.body.classList.toggle("flash");
-            hit.play()
-            hit.currentTime = 0
+			document.body.classList.toggle('flash');
+            hit.play();
+            hit.currentTime = 0;
 			result++;
 			score.textContent = result;
 			hitPosition = null;
 		}
 	});
 });
-
-/*
- * Start game function
- * Awaits the user clicking 'Start Game' button
- * Modal opening screen disappears
- * Game starts with a Power Station appearing randomly every 700ms
- */
-startButton.addEventListener("click", () => {
-	modal.classList.add("modalclose");
-
-	function moveCoal() {
-		timerId = setInterval(randomSquare, 700);
-	}
-	moveCoal();
-});
-
 // Credit to Sweet Alert 2 for providing the 'Swal' customisable alert code
 /* 
  * In-game timer countdown function
@@ -103,9 +67,32 @@ function countDown() {
 			allowOutsideClick: false,
 			allowEscapeKey: false
 		}).then(function() {
-			window.location = "index.html";
+			window.location = 'index.html';
 		});
 	}
 }
-
-let countDownTimerId = setInterval(countDown, 1000);
+/*
+ * Start game function
+ * Awaits the user clicking 'Start Game' button
+ * Modal opening screen disappears
+ * Game starts with a Power Station appearing randomly every 700ms
+ */
+startButton.addEventListener('click', () => {
+	modal.classList.add('modalclose');
+	let countDownTimerId = setInterval(countDown, 1000);
+	function moveCoal() {
+		timerId = setInterval(randomSquare, 700);
+	}
+	moveCoal();
+});
+/** 
+ * In-game function randomising which square the Power Station appears
+ */
+ function randomSquare() {
+	squares.forEach(square => {
+		square.classList.remove('coal');
+	});
+	let randomSquare = squares[Math.floor(Math.random() * 9)];
+	randomSquare.classList.add('coal');
+	hitPosition = randomSquare.id;
+}

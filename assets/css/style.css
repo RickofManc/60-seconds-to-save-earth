@@ -19,7 +19,7 @@ body {
 }
 /* Game intro page styles */
 .modal {
-  cursor: default;
+  cursor: pointer;
   position: absolute;
   top: 0;
   z-index: 10000;
@@ -41,6 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  cursor: pointer;
 }
 /* Game intro start button styles */
 .start-button,
@@ -86,16 +87,12 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: auto;
   background-color: rgba(255, 255, 255, 0.4);
   margin: 0 0 1rem 0;
   text-align: center;
   align-items: center;
 }
 .game-title {
-  display: block;
-  width: 100%;
-  height: auto;
   padding: 0.25rem;
   margin: 0.5rem auto 0;
   font-size: 3rem;
@@ -105,14 +102,13 @@ header {
 .time-left {
   display: inline-block;
   width: 18rem;
-  height: auto;
   margin: 0.25rem;
   font-size: 2rem;
   user-select: none;
 }
 /* Game area styles for the Power Stations to pop-up */
 .game-area-div {
-  display: inline-block;
+  display: block;
   align-content: center;
   position: absolute;
   top: 50%;
@@ -136,8 +132,7 @@ header {
 }
 /* Power Station styles */
 .coal {
-  background: url("../images/power-station-144px.png") no-repeat center;
-  --cursor: pointer;
+  background: url('../images/power-station-144px.png') no-repeat center;
 }
 /* Flash effect that provides user feedback on a successful hit */
 .flash {
@@ -145,38 +140,51 @@ header {
 }
 /* Renewable energy source used to hit power stations */
 .wind-turbine {
-    position: absolute;
-    z-index: 1000;
-    height: 100px;
-    top: 0;
-    left: 0;
-    transform: translate(10px, -40px);
-    pointer-events: none;
+  position: absolute;
+  z-index: 1000;
+  height: 100px;
+  top: 0;
+  left: 0;
+  transform: translate(10px, -40px);
+  pointer-events: none;
 }
 /* 404 Error page style */
 .error-page-div {
-  display: contents;
   position: absolute;
+  display: block;
+  cursor: pointer;
+  background: #171d29;
+  background-size: cover;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%
 }
 .error-page-background {
-  position: absolute;
-  background: no-repeat center #171d29;
-  width: 100%;
+  display: block;
+  background: no-repeat center;
+  position: relative;
+  width: 70%;
+  max-width: 40rem;
   height: auto;
-  top: 0;
+  margin: 0.5rem auto;
 }
 .error-page-text {
   position: relative;
-  text-align: left;
+  text-align: center;
   margin: 1rem;
   color: #fff;
   font-weight: 400;
   user-select: none;
+  top: 0;
+}
+.error-page-button {
+  position: relative;
+  align-items: center;
+  margin: 1rem;
 }
 .error-page-button button {
-  position: relative;
   padding: 0.5rem 1rem;
-  margin: 1rem;
   background-color: #fff;
   color: #111d5e;
   border: 0.25rem solid #c0e218;
@@ -189,5 +197,3 @@ header {
   background: #c0e218;
   transition: 0.5s ease;
 }
-
-

@@ -186,6 +186,7 @@
 .swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
   background: url('../images/game-over-background.webp') no-repeat center #c0e218;
   background-size: cover;
+  cursor: pointer;
 }
 .swal2-container.swal2-backdrop-hide {
   background: transparent !important;
