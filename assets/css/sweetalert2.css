@@ -288,6 +288,7 @@
   text-align: center;
   text-transform: none;
   word-wrap: break-word;
+  user-select: none;
 }
 
 .swal2-actions {
@@ -463,6 +464,7 @@
   word-wrap: break-word;
   word-break: break-word;
   text-transform: none;
+  user-select: none;
 }
 
 .swal2-input,

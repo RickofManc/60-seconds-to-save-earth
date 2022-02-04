@@ -151,7 +151,7 @@ The 'Wind Turbine' icon used to hit back at the Power Stations was also sourced 
 
 The 'In-game' background vector is sourced from [Adobe Stock](https://stock.adobe.com/uk/images/drought-concept-desert-landscape-rocks-and-stone/318820031) and being used under the paid for Standard License.
 
-The 'End Game' background vector was sourced free for commercial use from [Freepik](https://www.freepik.com/free-vector/wind-turbine-long-road-scene-dam-background_11250726.htm#&position=0&from_view=collections) with attribution credit due to the Designer brgfx.
+The 'End Game' background vector was sourced free for commercial use from [Freepik](https://www.freepik.com/free-vector/wind-turbine-long-road-scene-dam-background_11250726.htm#&position=0&from_view=collections) with attribution due to the Designer brgfx.
 
 The 'Favicon' has been sourced for free commercial use from [Raw Pixel](https://www.rawpixel.com/image/2904421/free-illustration-png-fire-planet-pollution).
 
