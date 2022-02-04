@@ -9,7 +9,7 @@ const windTurbine = document.querySelector('.wind-turbine');
 
 let result = 0;
 let hitPosition;
-let currentTime = 20;
+let currentTime = 60;
 let timerId = null;
 let countDownTimerId;
 
@@ -97,15 +97,3 @@ startButton.addEventListener('click', () => {
 		hitPosition = randomSquare.id;
 	}
 });
-
-/** 
- * In-game function randomising which square the Power Station appears
- */
- function randomSquare() {
-	squares.forEach(square => {
-		square.classList.remove('coal');
-	});
-	let randomSquare = squares[Math.floor(Math.random() * 9)];
-	randomSquare.classList.add('coal');
-	hitPosition = randomSquare.id;
-}

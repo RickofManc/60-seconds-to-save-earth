@@ -6,7 +6,6 @@ html {
   border: none;
 }
 body {
-  max-width: 2600px;
   margin: 0;
   height: auto;
   padding: 0;
@@ -16,6 +15,8 @@ body {
   font-weight: 300;
   letter-spacing: 0.2rem;
   cursor: none;
+  background: url('../images/in-game-background.webp') no-repeat center #f37121;
+  background-position: top;
 }
 /* Game intro page styles */
 .modal {
@@ -69,10 +70,9 @@ a:hover {
 }
 /* In-game page styles */
 .in-game-page-div {
-  display: contents;
-  position: absolute;
+  display: flex;
 }
-.in-game-page-background {
+/*.in-game-page-background {
   position: absolute;
   background: no-repeat center #f37121;
   background-size: cover;
@@ -80,19 +80,24 @@ a:hover {
   height: 100%;
   top: 0;
   left: 0;
-}
+}/*
 /* In-game page header styles */
 header {
-  display: block;
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
   top: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.4);
   margin: 0 0 1rem 0;
-  text-align: center;
-  align-items: center;
 }
 .game-title {
+  display: flex;
+  order: 1;
   padding: 0.25rem;
   margin: 0.5rem auto 0;
   font-size: 3rem;
@@ -100,7 +105,8 @@ header {
 }
 .score,
 .time-left {
-  display: inline-block;
+  order: 2;
+  display: flex;
   width: 18rem;
   margin: 0.25rem;
   font-size: 2rem;
@@ -108,10 +114,10 @@ header {
 }
 /* Game area styles for the Power Stations to pop-up */
 .game-area-div {
-  display: block;
-  align-content: center;
+  display: flex;
+  order: 3;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
