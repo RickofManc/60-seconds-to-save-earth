@@ -165,10 +165,12 @@ The '404 Page' background vector is sourced from [Adobe Stock](https://stock.ado
 
 ### Universal Features
 
-****Consistent features to ensure user feels at home, without adding unnecessary complication. for instance expectancy to see a header  with key information
-
 ##### In-game
-wind-turbine, flash, audio
+There are several in-game features that a user may expect to find when playing a game of this nature;
+* A scoreboard which increments by 1 with every successful hit.
+* A timer counting down how long is left on the users turn.
+* There are sounds to enhance the playing experience in the form of a sound for swiping at the power stations, and a different sound when the user successfully stops a power station. Both sound effects are wave files created at [jsfxr](https://sfxr.me/).
+* There is also a green screen flash for 50ms when a successful hit has been registered.
 
 ##### Meta data
 

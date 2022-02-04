@@ -82,7 +82,7 @@ startButton.addEventListener('click', () => {
 	modal.classList.add('modalclose');
 	let countDownTimerId = setInterval(countDown, 1000);
 	function moveCoal() {
-		timerId = setInterval(randomSquare, 900);
+		timerId = setInterval(randomSquare, 700);
 	}
 	moveCoal();
 	/** 

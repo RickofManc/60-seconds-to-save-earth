@@ -6,8 +6,10 @@ html {
   border: none;
 }
 body {
-  margin: 0;
-  height: auto;
+  margin: 0 auto;
+  max-width: 2300px;
+  width: 100%;
+  height: 100vh;
   padding: 0;
   border: none;
   font-family: 'Teko', sans-serif;
@@ -15,8 +17,9 @@ body {
   font-weight: 300;
   letter-spacing: 0.2rem;
   cursor: none;
-  background: url('../images/in-game-background.webp') no-repeat center #f37121;
-  background-position: top;
+  background: url('../images/in-game-background.webp') no-repeat #f37121;
+  background-position: center center;
+  background-attachment: fixed;
 }
 /* Game intro page styles */
 .modal {
@@ -33,15 +36,18 @@ body {
   background-color: #111d5e;
 }
 .start-game-screen-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60%;
+  height: auto;
+  margin: 1rem;
   color: #fff;
   font-size: 2rem;
   font-weight: 500;
   align-items: center;
   text-align: center;
   user-select: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   cursor: pointer;
 }
 /* Game intro start button styles */
@@ -117,9 +123,11 @@ header {
   display: flex;
   order: 3;
   position: absolute;
+  margin: 0.5rem;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .grid {
   width: 34rem;
@@ -128,6 +136,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 /* Individual grid squares with border removed to reduce user expectancy of pop-up's */
 .square {
