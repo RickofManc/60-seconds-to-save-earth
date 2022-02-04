@@ -44,7 +44,8 @@ body {
   justify-content: space-around;
 }
 /* Game intro start button styles */
-.modal button {
+.start-button,
+.learn-more-button {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   background-color: #fff;
@@ -54,8 +55,9 @@ body {
   font-family: 'teko';
   font-size: 2rem;
   font-weight: 500;
+  text-decoration: none;
 }
-.modal button:hover {
+a:hover {
   background: #c0e218;
   transition: 0.5s ease;
 }
@@ -140,8 +142,10 @@ header {
 .wind-turbine {
     position: absolute;
     z-index: 1000;
-    height: 8rem;
-    transform: translate(1rem, -4rem);
+    height: 10px;
+    top: 0;
+    left: 0;
+    transform: translate(10px, -40px);
     pointer-events: none;
 }
 /* 404 Error page style */
@@ -155,7 +159,6 @@ header {
   width: 100%;
   height: auto;
   top: 0;
-  overflow: hidden;
 }
 .error-page-text {
   position: relative;

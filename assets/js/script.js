@@ -30,7 +30,7 @@ function randomSquare() {
 }
 
 /** 
- * In-game function randomising which square the Power Station appears
+ * In-game function waiting for the mouse to position the wind turbine
  */
 window.addEventListener("mousemove",(e) => {
     windTurbine.style.left = e.pageX + "px";
