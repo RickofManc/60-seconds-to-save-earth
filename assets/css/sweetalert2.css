@@ -1405,3 +1405,42 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown
   bottom: 0;
   left: auto;
 }
+
+/* Styles for small screens i.e. mobile devices up to 650 px wide */
+
+@media screen and (max-width: 650px) {
+/* End of game Sweet Alert pop-box styles */
+.swal2-popup {
+  width: 80%;
+  padding: 0.50rem;
+  border: 0.15rem solid #c0e218;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+}
+.swal2-title {
+  position: relative;
+  margin: 0;
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.swal2-html-container {
+  margin: 0.25rem 0;
+  padding: 0;
+  overflow: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.swal2-styled.swal2-confirm {
+  border: 0.15rem solid #c0e218;
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem;
+  font-family: 'teko';
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.swal2-actions {
+  margin: 1rem;
+}

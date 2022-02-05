@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 html {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   border: none;
 }
 body {
-  margin: 0 auto;
+  margin: 0;
   max-width: 2300px;
   width: 100%;
   height: 100vh;
@@ -25,13 +25,14 @@ body {
 .modal {
   cursor: pointer;
   position: absolute;
-  top: 0;
+  margin: 0;
+  padding: 0;
   z-index: 10000;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  flex-wrap: nowrap;
   align-items: center;
   background-color: #111d5e;
 }
@@ -39,7 +40,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 60%;
+  flex-wrap: nowrap;
+  max-width: 60%;
+  position: absolute;
   height: auto;
   margin: 1rem;
   color: #fff;
@@ -211,4 +214,100 @@ header {
 .error-page-button button:hover {
   background: #c0e218;
   transition: 0.5s ease;
+}
+
+/* Styles for small screens i.e. mobile devices up to 650 px wide */
+
+@media screen and (max-width: 650px) {
+  .start-game-screen-div {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .intro-text {
+    margin: 1rem 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: normal;
+    width: 300px
+  }
+  /* Game intro start button styles */
+  .start-button,
+  .learn-more-button {
+    padding: 0.25rem 0.75rem;
+    margin: 0.5rem;
+    border: 0.15rem solid #c0e218;
+    font-family: 'teko';
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+  /* In-game page header styles */
+  header {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+  }
+  .game-title {
+    padding: 0.25rem;
+    margin: 0.25rem auto 0;
+    font-size: 1.5rem;
+   }
+  .score,
+  .time-left {
+    width: 18rem;
+    margin: 0.25rem;
+    font-size: 1.5rem;
+  }
+  /* Game area styles for the Power Stations to pop-up */
+  .game-area-div {
+    margin: 0.25rem;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .grid {
+    width: 22.5rem;
+    height: 37.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  /* Individual grid squares with border removed to reduce user expectancy of pop-up's */
+  .square {
+    width: 10.875rem;
+    height: 7.125rem;
+    --border: solid grey 0.25rem;
+    margin: 0.15rem;
+  }
+  .coal {
+    width: auto;
+    height: 6rem;
+    background: url('../images/power-station-144px.png') no-repeat center;
+  }
+  .wind-turbine {
+    position: absolute;
+    z-index: 1000;
+    height: 80px;
+    top: 0;
+    left: 0;
+    transform: translate(10px, -40px);
+    pointer-events: none;
+  }
+  /* 404 Error page style */
+  .error-page-text {
+    margin: 0.5rem;
+    letter-spacing: normal;
+  }
+  .error-page-button button {
+    padding: 0.25rem 0.75rem;
+    border: 0.15rem solid #c0e218;
+    font-family: 'teko';
+    font-size: 2rem;
+  }
 }
