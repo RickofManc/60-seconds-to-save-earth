@@ -85,7 +85,7 @@ startButton.addEventListener('click', () => {
 	window.addEventListener('mousemove', (e) => {
 		windTurbine.style.left = e.pageX + 'px';
 		windTurbine.style.top = e.pageY - 60 + 'px';
-	})
+	});
 	/** 
  	* In-game function moving the Power Station to a random square every 900ms
  	*/

@@ -30,6 +30,7 @@ body {
   align-items: center;
   background-color: #111d5e;
   cursor: pointer;
+  user-select: none;
 }
 .start-game-screen-div {
   display: flex;
@@ -164,8 +165,8 @@ header {
   position: absolute;
   z-index: 1000;
   height: 120px;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   transform: translate(10px, -40px);
   pointer-events: none;
 }
@@ -308,7 +309,7 @@ header {
     pointer-events: none;
   }
   /* 404 Error page style */
-  .error-page-text {
+  .error-page-header {
     margin: 0.5rem;
     letter-spacing: normal;
   }
