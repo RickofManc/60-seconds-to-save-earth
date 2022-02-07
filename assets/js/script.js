@@ -75,12 +75,20 @@ function countDown() {
 /*
  * Start game function
  * Awaits the user clicking 'Start Game' button
- * Modal opening screen disappears
- * Game starts with a Power Station appearing randomly every 700ms
+ * Opening screen modal closes
+ * Game timer counts down 
+ * Game starts with a Power Station appearing randomly every 900ms
  */
 startButton.addEventListener('click', () => {
 	modal.classList.add('modalclose');
 	let countDownTimerId = setInterval(countDown, 1000);
+	window.addEventListener('mousemove', (e) => {
+		windTurbine.style.left = e.pageX + 'px';
+		windTurbine.style.top = e.pageY - 60 + 'px';
+	})
+	/** 
+ 	* In-game function moving the Power Station to a random square every 900ms
+ 	*/
 	function moveCoal() {
 		timerId = setInterval(randomSquare, 900);
 	}
@@ -98,7 +106,4 @@ startButton.addEventListener('click', () => {
 	}
 });
 
-window.addEventListener('mousemove', (e) => {
-	windTurbine.style.left = e.pageX + 'px';
-	windTurbine.style.top = e.pageY - 60 + 'px';
-})
+
