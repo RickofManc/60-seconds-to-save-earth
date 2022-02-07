@@ -198,30 +198,92 @@ Following a successful MVP launch, the game has the opportunity to be further de
 
 ## Testing 
 
+Throughout the Build phase Chrome Developer Tools are used to ensure all pages are being developed to remain intuitive, responsive and accessible across all device widths. Primarily the pages were designed at 1920px wide reducing to 320px for mobile devices. These tools and others were used for the Testing phase. Full details and results of this phase can be found within this document 
 
+***[ADD XLS TEST DOCUMENT LINK].
+
+The following sections summarise the tests and results.
 
 ### Code 
 
-Code has been tested using the [HTML Validator](https://validator.w3.org/), [CSS Validator](https://jigsaw.w3.org/css-validator/) and [JS Validator](https://jshint.com/) with the following results:
+The code on each file has been tested using the appropriate validation service; W3C Markup for HTML, W3C Jigsaw for CSS and JSHint for JavaScript.
 
+Below are the summarised positive results from these tests:
 
+* **index.html** - 0 Errors / 0 Warnings
+* **404.html** - 0 Errors / 0 Warnings
+* **style.css** - 0 Errors / 1 Warning 'Imported style sheet for Google Font has not been checked as part of the direct input validation service. This is a known and acceptable warning.
+* **sweetalert2.css** - 0 Errors / 47 Warnings informing '-webkit-animation is a vendor extension'. This is anticipated and a accepted warning.
+* **script.js** - 0 Errors / 24 Warnings considered acceptable consisting of either;
+    1. 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) or,
+    2. 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+* **sweetalert.js** - 0 Errors / 804 Warnings considered acceptable consisting of either;
+    1. 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) or,
+    2. 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
 
 ### Browser
 
+To ensure site visitors can view and play the '60 Seconds to Save Earth Game' on differing browsers, testing was performed on the test scenarios listed in the table below.
 
+To achieve a 'Pass' the following criteria had to be met across all website pages;
+1. All buttons provide user feedback on hover and execute correctly when clicked.
+2. All images are loaded and displayed correctly at the differing media queries.
+3. All pages retain layout integrity throughout the Body and across the differing media queries
+4. All text uses 'Teko' font style.
+5. The external link activates when clicked, and opens in a new tab or browser window.
+6. The game starts as planned with a countdown from 60 seconds, and users are able to score points.
+7. All in-game sounds and flash effects work throughout the 60 seconds game time.
+8. The end-game screen appears after 60 seconds and provides the user with their final score.
+9. 404 Error Page could be found and users can navigate back to the homepage using the button provided.
+
+
+| Browser                    | Version | Test Facility  | Pass | Partial Pass | Fail | Comments for Partial Pass and/or Fail                                          |
+| -------------------------- | ------- | -------------- | ---- | ------------ | ---- | ------------------------------------------------------------------------------ |
+| Internet Explorer          | 8       | Netrender.com  |      |              | ü    | Website could not render and therefore not loaded                              |
+| Internet Explorer          | 9       | Netrender.com  |      |              | ü    | Website could load the initial opening screen however no further functionality |
+| Internet Explorer          | 10      | Netrender.com  |      |              | ü    | Website could not render and therefore not loaded                              |
+| Internet Explorer          | 11      | ASUS ZenBook   | ü    |              |      | Website worked however IE11 is being phased out by Microsoft in June 2022      |
+| Microsoft Edge (Win 11)    | 98      | ASUS ZenBook   | ü    |              |      |                                                                                |
+| Google Chrome (Win 11)     | 97      | ASUS ZenBook   | ü    |              |      |                                                                                |
+| Firefox                    | 96      | ASUS ZenBook   | ü    |              |      |                                                                                |
+| Safari (macOS Mojave)      | 12      | lambdatext.com | ü    |              |      |                                                                                |
+| Opera (macOS Sierra 10.12) | 74      | lambdatext.com | ü    |              |      |                                                                                |
 
 
 ### Device
 
+To ensure site visitors can view and play the '60 Seconds to Save Earth Game' on differing devices, testing was performed on the test scenarios listed in the table below.
+
+To achieve a 'Pass' the following criteria had to be met across all website pages;
+1. All buttons provide user feedback on hover and execute correctly when clicked.
+2. All images are loaded and displayed correctly at the differing media queries.
+3. All pages retain layout integrity throughout the Body and across the differing media queries
+4. All text uses 'Teko' font style.
+5. The external link activates when clicked, and opens in a new tab or browser window.
+6. The game starts as planned with a countdown from 60 seconds, and users are able to score points.
+7. All in-game sounds and flash effects work throughout the 60 seconds game time.
+8. The end-game screen appears after 60 seconds and provides the user with their final score.
+9. 404 Error Page could be found and users can navigate back to the homepage using the button provided.
 
 
 
 ### Accessibility 
 
+Each page has been tested using the [Wave (Web Accessibility Evaluation Tool)](https://wave.webaim.org/) where zero errors or alerts were identified.
 
+![Index Page Results](readme-images/index.html-WAVE-test-070222.png) ![404.html Results](readme-images/404.html-WAVE-test-070222.png)
 
 ### Performance 
 
+Using Lighthouse performance testing within Chrome Developer Tools, all pages performance has been tested on both Desktop and Mobile devices. The results highlighted a slightly slower page load time is recommended. This was primarily due to the browser attempting to load the JavaScript files at the same time as the DOM and CSS. To resolve this issue the 'defer' attribute was included in the HTMl Script tags informing the Browser to prioritise the more critical page elements before the JavaScript. This helped to improve the user experience, and see the following positive results.
+
+![Lighthouse Test Results](readme-images/lighthouse-test-results-070222.png)
+
+
+### User Stories
+
+****The leading user stories have been tested to ensure the priority aims of the website have been delivered. 
+Below is a summary of the test results.
 
 
 ### Issues
