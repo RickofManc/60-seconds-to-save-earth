@@ -91,6 +91,19 @@ a:hover {
   left: 0;
 }/*
 /* In-game page header styles */
+.in-game-page-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  margin: 0.15rem;
+  padding: 0;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -264,14 +277,15 @@ header {
   }
   /* Game area styles for the Power Stations to pop-up */
   .game-area-div {
-    margin: 0.25rem;
-    top: 30%;
+    top: 58%;
     left: 50%;
+    margin: auto;
     transform: translate(-50%, -50%);
+    align-items: center;
   }
   .grid {
-    width: 22.5rem;
-    height: 37.5rem;
+    width: 400px;
+    height: 536px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -280,15 +294,18 @@ header {
   }
   /* Individual grid squares with border removed to reduce user expectancy of pop-up's */
   .square {
-    width: 10.875rem;
-    height: 7.125rem;
+    width: 140px;
+    height: 104px;
     --border: solid grey 0.25rem;
-    margin: 0.15rem;
+    margin: 0.15rem 0.25rem;
+    padding: 0;
   }
   .coal {
-    width: auto;
-    height: 6rem;
-    background: url('../images/power-station-144px.png') no-repeat center;
+    padding: 0;
+    margin: 0;
+    width: 120px;
+    height: 102px;
+    background: url('../images/power-station-120px.png') no-repeat center;
   }
   .wind-turbine {
     position: absolute;
