@@ -25,13 +25,16 @@
     <!-- Main content section -->
     <div class="error-page-div">
       <!-- Text to inform the user what has happened and the action to take -->
-      <div class="error-page-text">
+      <header class="error-page-header">
         <h1>Oops! Page Not Found</h1>
         <h2>Click the button below to get back to saving Earth!</h2>
-      </div>
+      </header>
       <!-- Container for the button the navigate the user back to the homepage -->
       <div class="error-page-button">
-        <button onclick="window.location.href='index.html';">
+        <button
+          type="button"
+          aria-label="restart game"  
+          onclick="window.location.href='index.html';">
           Restart Game
         </button>
         </div>
