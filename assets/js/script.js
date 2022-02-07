@@ -28,11 +28,11 @@ let swipe = new Audio('assets/sounds/swipe.wav');
  */
 squares.forEach(square => {
 	square.addEventListener('mousedown', () => {
-		windTurbine.style.transform = 'rotateZ(50deg) rotateY (-180deg)';
+		windTurbine.style.transform = 'rotateZ(-50deg) rotateY (-180deg)';
         swipe.play();
         swipe.currentTime = 0;
         setTimeout(() => {
-            windTurbine.style.transform ='rotateZ(-45deg) rotateY(-180deg)';
+            windTurbine.style.transform ='rotateZ(0deg) rotateY(-180deg)';
         }, 40);
         
         if (square.id == hitPosition) {
@@ -82,7 +82,7 @@ startButton.addEventListener('click', () => {
 	modal.classList.add('modalclose');
 	let countDownTimerId = setInterval(countDown, 1000);
 	function moveCoal() {
-		timerId = setInterval(randomSquare, 700);
+		timerId = setInterval(randomSquare, 900);
 	}
 	moveCoal();
 	/** 
@@ -97,3 +97,8 @@ startButton.addEventListener('click', () => {
 		hitPosition = randomSquare.id;
 	}
 });
+
+window.addEventListener('mousemove', (e) => {
+	windTurbine.style.left = e.pageX + 'px';
+	windTurbine.style.top = e.pageY - 60 + 'px';
+})
