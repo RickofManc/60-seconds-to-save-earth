@@ -115,7 +115,7 @@ Excited from playing once, the user will presented with an option to 'Play Again
 
 As part of this phase wireframes for all screens have produced using [Balsamiq](https://balsamiq.com/wireframes/) (see samples below - all wireframes can be found within the project [Repo](https://github.com/RickofManc/60-seconds-to-save-earth)).
 
-The website is responsive through differing screen widths from with the final design requiring CSS Media Queries for max-screen widths of 650px, ensuring accessibility on any device or desktop monitor.
+The website is responsive through differing screen widths from with the final design requiring CSS Media Queries for max-screen widths of 650px and 405px, ensuring accessibility on any device or desktop monitor.
 
 ![Wireframes](readme-images/wireframes.png)
 

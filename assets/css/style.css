@@ -349,3 +349,72 @@ header {
     border: 0.15rem solid #c0e218;
   }
 }
+
+/* Styles for small screens i.e. mobile devices up to 405 px wide */
+
+@media screen and (max-width: 405px) {
+  .start-game-screen-div {
+    margin: 0.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .intro-text {
+    margin: 0.5rem 0.25rem;
+    font-size: 1.5rem;
+  }
+  /* Game intro start button styles */
+  .start-button,
+  .learn-more-button {
+    padding: 0.25rem 0.75rem;
+    margin: 0.5rem;
+    border-width: 0.15rem;
+    font-size: 1.5rem;
+  }
+  /* In-game page header styles */
+  header {
+    margin: 0 0 0.5rem 0;
+  }
+  .game-title {
+    padding: 0.25rem;
+    margin: 0.25rem 0.5rem;
+    font-size: 1rem;
+  }
+  .score,
+  .time-left {
+    width: 7rem;
+    padding: 0.25rem;
+    margin: 0.15rem 0.5rem;
+    font-size: 1rem;
+  }
+  .effects-button,
+  .exit-game-button {
+    position: absolute;
+    top: 2.25rem;
+    right: 0.5rem;
+    padding: 0rem 0.15rem;
+    border-width: 0.05rem;
+    margin: 0.15rem;
+    font-size: 1rem;
+    width: 3.8rem;
+  }
+  .effects-button {
+    top: 4.5em;
+    right: 0.5rem;
+    width: 4.2rem;
+  }
+  /* Game area styles for the Power Stations to pop-up */
+  .grid {
+    width: 318px;
+    height: 536px;
+  }
+  /* Individual grid squares with border removed to reduce user expectancy of pop-up's */
+  .square {
+    width: 145px;
+    height: 98px;
+  }
+  .coal {
+    width: 115px;
+    height: 95px;
+  }
+}
