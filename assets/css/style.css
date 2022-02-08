@@ -154,8 +154,7 @@ header {
 .coal {
   background: url('../images/power-station-144px.png') no-repeat center;
   pointer-events: all;
-  cursor: pointer;
-  
+  cursor: none;
 }
 /* Flash effect that provides user feedback on a successful hit */
 .flash {
@@ -170,6 +169,7 @@ header {
   left: 50%;
   transform: translate(10px, -40px);
   pointer-events: none;
+  cursor: none;
 }
 /* 404 Error page style */
 .error-page-div {
