@@ -106,4 +106,17 @@ startButton.addEventListener('click', () => {
 	}
 });
 
+// Mute sound and effects button
+/**
+ * In-game functionality to stop wave sounds and flash effect when 'Mute' button is clicked
+ */
+function mute() {
+	if (swipe.paused) {
+		swipe.pause();
+		swipe.currentTime = 0;
+	} else {
+		swipe.play();
+	}
+};
+
 
