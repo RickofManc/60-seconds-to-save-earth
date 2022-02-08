@@ -26,15 +26,16 @@
     <title>60 Seconds to Save Earth</title>
   </head>
   <body>
-      <!-- Opening screen with game instructions and start button -->
+      <!-- Opening screen with game instructions and start button
       <div class="modal">
         <div class="start-game-screen-div">
           <p class="intro-text">
             The year is 2035...<br />
             all attempts to stop profiting from fossil fuels have failed.<br />
             Climate change is nearly out of control, earth is burning up!<br />
-            You have 60 seconds to stop power stations being built,<br />
-            hit back with renewable energy...<br />
+            You have 60 seconds to stop Power Stations being built,<br />
+            hit back with renewable energy!<br />
+            Use the Wind Turbine to hit Power Stations as they pop-up!<br />
             Can you Save Earth?
           </p>
           <button
@@ -53,7 +54,7 @@
             >Learn More About Climate Change</a
             >
         </div>
-      </div>
+      </div>-->
     <!-- Main in-game content container -->
     <div class="in-game-page-div">
       <!-- In-game page header for Title, Score and Time Left -->
@@ -61,6 +62,21 @@
         <h1 class="game-title">60 Seconds to Save Earth!</h1>
         <h2 class="score">Score: <span id="score">0 </span></h2>
         <h2 class="time-left">Time Left: <span id="time-left">60 </span></h2>
+        <a
+          type="text/html"
+          class="exit-game-button"
+          aria-label="exit the game and return to the main menu"
+          href="https://rickofmanc.github.io/60-seconds-to-save-earth/"
+          rel="noopener noreferrer"
+          >Exit Game</a
+          >
+        <button
+          type="button"
+          class="effects-button"
+          aria-label="turn sound and flashes on or off"
+          rel="noopener noreferrer"
+          >Effects Off</button
+          >
       </header>
       <!-- In-game grid where the Power Stations pop-up -->
       <div class="game-area-div">

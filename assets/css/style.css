@@ -12,7 +12,7 @@ body {
   font-family: 'Teko', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   cursor: none;
   overflow: hidden;
 }
@@ -56,7 +56,9 @@ body {
 }
 /* Game intro start button styles */
 .start-button,
-.learn-more-button {
+.learn-more-button,
+.exit-game-button,
+.effects-button {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   background-color: #fff;
@@ -100,8 +102,6 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  align-content: center;
   position: absolute;
   top: 0;
   width: 100%;
@@ -111,8 +111,9 @@ header {
 .game-title {
   display: flex;
   order: 1;
-  padding: 0.25rem;
+  padding: 0.25rem 1rem;
   margin: 0.5rem 0;
+  text-align: left;
   font-size: 3rem;
   user-select: none;
 }
@@ -122,8 +123,17 @@ header {
   display: flex;
   width: 18rem;
   margin: 0.25rem;
+  padding: 0.25rem 1rem;
+  text-align: left;
   font-size: 2rem;
   user-select: none;
+}
+.exit-game-button,
+.effects-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  padding: 0rem 0.5rem;
 }
 /* Game area styles for the Power Stations to pop-up */
 .game-area-div {
