@@ -186,6 +186,7 @@ A '404 Not Found' page has been added to the website in the event of a failed li
 Following a successful MVP launch, the game has the opportunity to be further developed over a relatively short period to increase its reach globally. Here is a selection of the key future development features:
 * Change difficulty between 'Easy' and 'Hard' to further challenge users.
 * Differing images of fossil fuels being burnt to increase educational awareness.
+* Different end-game screen if the user score is 0.
 * Animate the images when a hit is recorded.
 * Optional background music to enhance the user experience.
 * To increase speed and focus, background music could quicken with 10 seconds remaining and a voice calls (10, 9, 8...).
@@ -198,11 +199,10 @@ Following a successful MVP launch, the game has the opportunity to be further de
 
 ## Testing 
 
-Throughout the Build phase Chrome Developer Tools are used to ensure all pages are being developed to remain intuitive, responsive and accessible across all device widths. Primarily the pages were designed at 1920px wide reducing to 320px for mobile devices. These tools and others were used for the Testing phase. Full details and results of this phase can be found within this document 
-
-***[ADD XLS TEST DOCUMENT LINK].
+Throughout the Build phase Chrome Developer Tools are used to ensure all pages are being developed to remain intuitive, responsive and accessible across all device widths. Primarily the pages were designed at 1920px wide reducing to 320px for mobile devices. These tools and others were used for the Testing phase. Full details and results of this phase can be found within this [document](doc:60-Seconds-to-Save-Earth-Testing-Phase-Feb-2022.pdf)
 
 The following sections summarise the tests and results.
+
 
 ### Code 
 
@@ -220,6 +220,7 @@ Below are the summarised positive results from these tests:
 * **sweetalert.js** - 0 Errors / 804 Warnings considered acceptable consisting of either;
     1. 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) or,
     2. 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+
 
 ### Browser
 
@@ -266,12 +267,21 @@ To achieve a 'Pass' the following criteria had to be met across all website page
 9. 404 Error Page could be found and users can navigate back to the homepage using the button provided.
 
 
+| Device       | Type               | Pass | Partial Pass | Fail |
+| ------------ | ------------------ | ---- | ------------ | ---- |
+| Mobile Phone | iPhone SE          | ü    |              |      |
+| Mobile Phone | Samsung Galaxy S21 | ü    |              |      |
+| Tablet       | iPad (2020)        | ü    |              |      |
+| Tablet       | iPad 3 (2012)      | ü    |              |      |
+| Laptop       | ASUS ZenBook 14"   | ü    |              |      |
+
 
 ### Accessibility 
 
 Each page has been tested using the [Wave (Web Accessibility Evaluation Tool)](https://wave.webaim.org/) where zero errors or alerts were identified.
 
 ![Index Page Results](readme-images/index.html-WAVE-test-070222.png) ![404.html Results](readme-images/404.html-WAVE-test-070222.png)
+
 
 ### Performance 
 
@@ -288,7 +298,17 @@ Below is a summary of the test results.
 
 ### Issues
 
+The issues listed in the table below we identified during the Development phase in late January / early February 2022. Some issues remain with fixes required for future releases.
+Where indicated the issue has either been resolved or no further action will be taken at the present time.
 
+
+| Ref  | Title                                            | Description                                                                                                   | Issue location | Code       | Date Identified | Date Resolved | Latest Update                                                                                                                                                                                                                            |
+| ---- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | -------------- | ---------- | --------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ISS1 | Opening screen not covering screen               | The modal that greets users to the site is not completely covering the main in-game content behind            | Modal Div.     | CSS        | 31/01/2022      | 01/02/2022    | Added 'Top : 0' to CSS styles and ensured the Height and Margin properties were applied correctly.                                                                                                                                       |
+| ISS2 | High Score font not using theme                  | The text within the Header element is not showing the applied CSS styles                                      | In-game Div.   | CSS        | 31/01/2022      | 01/02/2022    | Changes were required to the CSS styles to override the browser attributes for H1 and H2 elements to ensure the look and feel of the website was consistent for users.                                                                   |
+| ISS3 | Users final score not showing on End Game screen | The final result displayed on the pop-up message is 0                                                         | Script.js      | JavaScript | 31/01/2022      | 01/02/2022    | The data the code was referencing was incorrect and required a change within the Sweet Alert function to show the 'result'.                                                                                                              |
+| ISS4 | Slow page loading time                           | Lighthouse testing highlighted the initial page loading could be more inline with user expectations           | HTML script  | HTML       | 07/02/2022      | 07/02/2022    | Following the guidance provided by Lighthouse, the 'defer' attribute was added to both Script tags within the index.html file to delay the loading of JavaScript. This allowed the more critical elements to be prioritised for loading. |
+| ISS5 | Content small on 5K screens                      | Users who are playing the game on a 5K screen would not be able to see the content clearly as it is too small | Stylesheet     | CSS        | 07/02/2022      |               | Media queries being developed to ensure the game is playable on the largest screens. This fix will likely be scheduled for the next release.                                                                                             |
 
 
 ## Deployment
