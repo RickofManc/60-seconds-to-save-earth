@@ -105,7 +105,7 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 0 0 1rem 0;
 }
 .game-title {
@@ -115,6 +115,7 @@ header {
   margin: 0.5rem 0;
   text-align: left;
   font-size: 3rem;
+  color: #111d5e;
   user-select: none;
 }
 .score,
@@ -126,14 +127,24 @@ header {
   padding: 0.25rem 1rem;
   text-align: left;
   font-size: 2rem;
+  color: #111d5e;
   user-select: none;
 }
-.exit-game-button,
-.effects-button {
+.effects-button,
+.exit-game-button {
   position: absolute;
-  top: 0.75rem;
+  top: 1.25rem;
   right: 1rem;
-  padding: 0rem 0.5rem;
+  padding: 0rem 0.25rem;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 7.2rem;
+  border: 0.15rem solid #111d5e;
+}
+.effects-button {
+  top: 5.5rem;
+  right: 1rem;
+  width: 8rem;
 }
 /* Game area styles for the Power Stations to pop-up */
 .game-area-div {
@@ -239,7 +250,7 @@ header {
     margin: 0.5rem;
     font-size: 1.5rem;
     font-weight: 500;
-    letter-spacing: normal;
+    letter-spacing: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -248,7 +259,7 @@ header {
     margin: 1rem 0.25rem;
     font-size: 1.5rem;
     font-weight: 500;
-    letter-spacing: normal;
+    letter-spacing: 0;
     width: 300px
   }
   /* Game intro start button styles */
@@ -260,7 +271,7 @@ header {
     font-family: 'teko';
     font-size: 1.5rem;
     font-weight: 500;
-    letter-spacing: normal;
+    letter-spacing: 0;
   }
   /* In-game page header styles */
   header {
@@ -269,14 +280,27 @@ header {
   }
   .game-title {
     padding: 0.25rem;
-    margin: 0.25rem auto 0;
+    margin: 0.25rem 1rem;
     font-size: 1.5rem;
-   }
+  }
   .score,
   .time-left {
-    width: 18rem;
-    margin: 0.25rem;
+    width: 9rem;
+    margin: 0.15rem;
     font-size: 1.5rem;
+  }
+  .effects-button,
+  .exit-game-button {
+  position: absolute;
+  top: 3.25rem;
+  padding: 0rem 0.15rem;
+  font-size: 1rem;
+  width: 5.2rem;
+  }
+  .effects-button {
+    top: 6rem;
+    right: 1rem;
+    width: 5.8rem;
   }
   /* Game area styles for the Power Stations to pop-up */
   .game-area-div {
@@ -311,23 +335,17 @@ header {
     background: url('../images/power-station-120px.png') no-repeat center;
   }
   .wind-turbine {
-    position: absolute;
-    z-index: 1000;
     height: 80px;
-    top: 0;
-    left: 0;
     transform: translate(10px, -40px);
     pointer-events: none;
   }
   /* 404 Error page style */
   .error-page-header {
     margin: 0.5rem;
-    letter-spacing: normal;
+    letter-spacing: 0;
   }
   .error-page-button button {
     padding: 0.25rem 0.75rem;
     border: 0.15rem solid #c0e218;
-    font-family: 'teko';
-    font-size: 2rem;
   }
 }
