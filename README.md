@@ -48,9 +48,9 @@ The game is targeted at a wide user base, starting from school children where co
 * As a user, I want to understand how long I have to play the game, so I can meet the duration of the challenge
 * As a user, I want to beat my score, so I can understand if I'm improving with the more I play
 * As a user, I want to learn more about Climate Change, so I can understand more about the games theme and improve my own ways of living
-* As a user, I want to increase the difficulty of the challenge
-* As a user, I want to exit the game at any point
-* As a user, I want to turn off any music, sounds and effects
+*  As a user, I want to increase the difficulty, so that I can be more challenged if the default setting becomes too easy
+* As a user, I want to exit the game at any point, so that I can change preferences or have to stop playing
+* As a user, I want to turn off any music, sounds and effects, so I can play the game according to my personal preferences
 
 #### Primary strategic aims for the website
 * Educate on the impact of burning fossil fuels on Climate Change. 
@@ -123,7 +123,7 @@ The website is responsive through differing screen widths from with the final de
 
 ### Surface 
 
-In consideration of the key aim to make learning fun, the visual language has to convey this tone. Therefore the use of arcade style graphics, known to be fun and engaging was applied in the following areas.
+In consideration of the key aim to make learning fun, the visual language has to convey this tone. Therefore the use of arcade styles, known to be fun and engaging was applied in the following areas.
 
 
 #### Colour 
@@ -132,7 +132,7 @@ The game of whac-a-mole released into Japanese arcade centres in the late 70's. 
 
 At a high-level the colour palette carries some of the games theme offering;
 * A warning for the end of Earth scenario using Red and Orange hues,
-* an opportunity to save Earth with Green renewable energy. This particular shade offers a A colour that is bright to use for the most important elements of the site,
+* an opportunity to save Earth with Green renewable energy. This particular shade offers a colour that is bright to use for the most important elements of the site,
 * and a neutral balance with calm Dark Blue that also balances the brighter colours.
 
 ![Save Earth Game Palette](readme-images/save-earth-game-colour-palette.png)
@@ -177,7 +177,7 @@ The '404 Page' background vector is sourced from [Adobe Stock](https://stock.ado
 There are several in-game features that a user may expect to find when playing a game of this nature;
 * A scoreboard which increments by 1 with every successful hit.
 * A timer counting down how long is left on the users turn.
-* There are sounds to enhance the playing experience in the form of a sound for swiping at the power stations, and a different sound when the user successfully stops a power station. Both sound effects are wave files created at [jsfxr](https://sfxr.me/).
+* There are sounds to enhance the playing experience in the form of a sound for swiping at the Power Stations, and a different sound when the user successfully stops a Power Station. Both sound effects are wave files created at [jsfxr](https://sfxr.me/).
 * There is also a green screen flash for 50ms when a successful hit has been registered.
 
 ##### Meta data
@@ -248,15 +248,15 @@ To achieve a 'Pass' the following criteria had to be met across all website page
 
 | Browser                    | Version | Test Facility  | Pass | Partial Pass | Fail | Comments for Partial Pass and/or Fail                                          |
 | -------------------------- | ------- | -------------- | ---- | ------------ | ---- | ------------------------------------------------------------------------------ |
-| Internet Explorer          | 8       | Netrender.com  |      |              | ü    | Website could not be rendered                                                  |
-| Internet Explorer          | 9       | Netrender.com  |      |              | ü    | Website could load the opening screen however no further functionality         |
-| Internet Explorer          | 10      | Netrender.com  |      |              | ü    | Website could not be rendered                                                  |
-| Internet Explorer          | 11      | ASUS ZenBook   | ü    |              |      | Website worked however IE11 is being phased out by Microsoft in June 2022      |
-| Microsoft Edge (Win 11)    | 98      | ASUS ZenBook   | ü    |              |      |                                                                                |
-| Google Chrome (Win 11)     | 97      | ASUS ZenBook   | ü    |              |      |                                                                                |
-| Firefox                    | 96      | ASUS ZenBook   | ü    |              |      |                                                                                |
-| Safari (macOS Mojave)      | 12      | lambdatext.com | ü    |              |      |                                                                                |
-| Opera (macOS Sierra 10.12) | 74      | lambdatext.com | ü    |              |      |                                                                                |
+| Internet Explorer          | 8       | Netrender.com  |      |              | :heavy_check_mark: | Website could not be rendered                                                  |
+| Internet Explorer          | 9       | Netrender.com  |      |              | :heavy_check_mark: | Website could load the opening screen however no further functionality         |
+| Internet Explorer          | 10      | Netrender.com  |      |              | :heavy_check_mark: | Website could not be rendered                                                  |
+| Internet Explorer          | 11      | ASUS ZenBook   | :heavy_check_mark: |              |      | Website worked however IE11 is being phased out by Microsoft in June 2022      |
+| Microsoft Edge (Win 11)    | 98      | ASUS ZenBook   | :heavy_check_mark: |              |      |                                                                                |
+| Google Chrome (Win 11)     | 97      | ASUS ZenBook   | :heavy_check_mark: |              |      |                                                                                |
+| Firefox                    | 96      | ASUS ZenBook   | :heavy_check_mark: |              |      |                                                                                |
+| Safari (macOS Mojave)      | 12      | lambdatext.com | :heavy_check_mark: |              |      |                                                                                |
+| Opera (macOS Sierra 10.12) | 74      | lambdatext.com | :heavy_check_mark: |              |      |                                                                                |
 
 
 ### Device
@@ -277,11 +277,11 @@ To achieve a 'Pass' the following criteria had to be met across all website page
 
 | Device       | Type               | Pass | Partial Pass | Fail |
 | ------------ | ------------------ | ---- | ------------ | ---- |
-| Mobile Phone | iPhone SE          | ü    |              |      |
-| Mobile Phone | Samsung Galaxy S21 | ü    |              |      |
-| Tablet       | iPad (2020)        | ü    |              |      |
-| Tablet       | iPad 3 (2012)      | ü    |              |      |
-| Laptop       | ASUS ZenBook 14"   | ü    |              |      |
+| Mobile Phone | iPhone SE          | :heavy_check_mark: |              |      |
+| Mobile Phone | Samsung Galaxy S21 | :heavy_check_mark: |              |      |
+| Tablet       | iPad (2020)        | :heavy_check_mark: |              |      |
+| Tablet       | iPad 3 (2012)      | :heavy_check_mark: |              |      |
+| Laptop       | ASUS ZenBook 14"   | :heavy_check_mark: |              |      |
 
 
 ### Accessibility 
@@ -293,7 +293,7 @@ Each page has been tested using the [Wave (Web Accessibility Evaluation Tool)](h
 
 ### Performance 
 
-Using Lighthouse performance testing within Chrome Developer Tools, all pages performance has been tested on both Desktop and Mobile devices. The results highlighted a slightly slower page load time is recommended. This was primarily due to the browser attempting to load the JavaScript files at the same time as the DOM and CSS. To resolve this issue the 'defer' attribute was included in the HTMl Script tags informing the Browser to prioritise the more critical page elements before the JavaScript. This helped to improve the user experience, and see the following positive results.
+Using Lighthouse performance testing within Chrome Developer Tools, all pages performance has been tested on both Desktop and Mobile devices. The results highlighted a slightly slower page load time than is recommended. This was primarily due to the browser attempting to load the JavaScript files at the same time as the DOM and CSS. To resolve this issue the 'defer' attribute was applied in the HTMl Script tags informing the Browser to prioritise the more critical page elements before the JavaScript. This helped to improve the user experience, and see the following positive results.
 
 ![Lighthouse Test Results](readme-images/lighthouse-test-results-070222.png)
 
@@ -314,16 +314,16 @@ Below is a summary of the stories validation.
 * As a user, I want to learn more about Climate Change, so I can understand more about the games theme and improve my own ways of living
     * The opening page provides an opportunity to learn more about Climate Change through clicking a button on the opening screen. This opens a new browser tab/window to an article on the impacts of burning fossil fuels on the Earths climate.
 * As a user, I want to increase the difficulty, so that I can be more challenged if the default setting becomes too easy
-    * This user story is scheduled to be developed in a future release with a button available to the user on the opening screen that allows them to toggle between Easy and Hard. A boolean function will be added to the existing JavaScript code to increase the speed of the pop-up if the user has selected 'Hard'. This will translate as the false option within the function.
+    * This user story is scheduled to be developed in a future release with a button available to the user on the opening screen that allows them to toggle between Easy and Hard. A boolean function will be added to the existing JavaScript code to increase the speed of the Power Station popping-up if the user has selected 'Hard'. This will translate as the false option within the function.
 * As a user, I want to exit the game at any point, so that I can change preferences or have to stop playing
     * An in-game feature is being developed that will be located within the Header. This will allow the user to click at any point during the 60 seconds to return back to the opening screen.
-* As a user, I want to turn off any music, sounds and effects
+* As a user, I want to turn off any music, sounds and effects, so I can play the game according to my personal preferences
     * A feature is being developed that will allow the user the opportunity to toggle these aspects on or off from either the opening screen or in-game. Due to time constraints this may be scheduled in a future release.
 
 
 ### Issues
 
-The issues listed in the table below we identified during the Development phase in late January / early February 2022. Some issues remain with fixes required for future releases.
+The issues listed in the table below we identified during late January / early February 2022. Some issues remain with fixes required for future releases.
 Where indicated the issue has either been resolved or no further action will be taken at the present time.
 
 
@@ -367,7 +367,7 @@ Further details on completing the final step can be found on GitHub's ['Fork a R
 ### People
 
 * Mentor Brian Macharia for guiding and advising throughout the projects lifecycle.
-* Code Institute Slack community for peer reviewing the website.
+* Code Institute Slack community for peer reviewing the code.
 
 ### Software & Web Applications
 
@@ -381,7 +381,7 @@ Further details on completing the final step can be found on GitHub's ['Fork a R
 * [CSS Validator](https://validator.w3.org/) - For validating CSS code.
 * [JS Validator](https://jshint.com/)  - For validating JavaScript code.
 * [Code Beautify](https://codebeautify.org/) - For validating the layout of all code.
-* [IE NetREnderer](https://netrenderer.com/index.php) - For testing website functionality on IE versions 5-10.
+* [IE NetREnderer](https://netrenderer.com/index.php) - For testing website functionality on IE versions 7-10.
 * [LambdaTest](https://www.lambdatest.com/) - For cross browser testing on macOS versions of Safari and Opera.
 
 
