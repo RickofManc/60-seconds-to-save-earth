@@ -43,6 +43,14 @@ The game is targeted at a wide user base, starting from school children where co
 
 #### Leading User Stories
 
+* As a user, I want to play a game that is easy to understand, challenging and fun to play, so I can be entertained
+* As a user, I want to understand my score, so I can assess my progress 
+* As a user, I want to understand how long I have to play the game, so I can meet the duration of the challenge
+* As a user, I want to beat my score, so I can understand if I'm improving with the more I play
+* As a user, I want to learn more about Climate Change, so I can understand more about the games theme and improve my own ways of living
+* As a user, I want to increase the difficulty of the challenge
+* As a user, I want to exit the game at any point
+* As a user, I want to turn off any music, sounds and effects
 
 #### Primary strategic aims for the website
 * Educate on the impact of burning fossil fuels on Climate Change. 
@@ -199,7 +207,7 @@ Following a successful MVP launch, the game has the opportunity to be further de
 
 ## Testing 
 
-Throughout the Build phase Chrome Developer Tools are used to ensure all pages are being developed to remain intuitive, responsive and accessible across all device widths. Primarily the pages were designed at 1920px wide reducing to 320px for mobile devices. These tools and others were used for the Testing phase. Full details and results of this phase can be found within this [document](doc:60-Seconds-to-Save-Earth-Testing-Phase-Feb-2022.pdf)
+Throughout the Build phase Chrome Developer Tools are used to ensure all pages are being developed to remain intuitive, responsive and accessible across all device widths. Primarily the pages were designed at 1920px wide reducing to 320px for mobile devices. These tools and others were used for the Testing phase. Full details and results of this phase can be found within the project [Repo](https://github.com/RickofManc/60-seconds-to-save-earth).
 
 The following sections summarise the tests and results.
 
@@ -240,9 +248,9 @@ To achieve a 'Pass' the following criteria had to be met across all website page
 
 | Browser                    | Version | Test Facility  | Pass | Partial Pass | Fail | Comments for Partial Pass and/or Fail                                          |
 | -------------------------- | ------- | -------------- | ---- | ------------ | ---- | ------------------------------------------------------------------------------ |
-| Internet Explorer          | 8       | Netrender.com  |      |              | ü    | Website could not render and therefore not loaded                              |
-| Internet Explorer          | 9       | Netrender.com  |      |              | ü    | Website could load the initial opening screen however no further functionality |
-| Internet Explorer          | 10      | Netrender.com  |      |              | ü    | Website could not render and therefore not loaded                              |
+| Internet Explorer          | 8       | Netrender.com  |      |              | ü    | Website could not be rendered                                                  |
+| Internet Explorer          | 9       | Netrender.com  |      |              | ü    | Website could load the opening screen however no further functionality         |
+| Internet Explorer          | 10      | Netrender.com  |      |              | ü    | Website could not be rendered                                                  |
 | Internet Explorer          | 11      | ASUS ZenBook   | ü    |              |      | Website worked however IE11 is being phased out by Microsoft in June 2022      |
 | Microsoft Edge (Win 11)    | 98      | ASUS ZenBook   | ü    |              |      |                                                                                |
 | Google Chrome (Win 11)     | 97      | ASUS ZenBook   | ü    |              |      |                                                                                |
@@ -292,8 +300,25 @@ Using Lighthouse performance testing within Chrome Developer Tools, all pages pe
 
 ### User Stories
 
-****The leading user stories have been tested to ensure the priority aims of the website have been delivered. 
-Below is a summary of the test results.
+The leading user stories have been tested to ensure the priority aims of the website have been delivered. 
+Below is a summary of the stories validation.
+
+* As a user, I want to play a game that is easy to understand, challenging and fun to play, so I can be entertained
+    * The concept of whac-a-mole has been hugely popular for decades and this came across in user testing with the vast majority liking and understanding the game from their first play.
+* As a user, I want to understand my score, so I can assess my progress
+    * The in-game scoreboard increments by 1 point as the user successfully hits a Power Station.
+* As a user, I want to understand how long I have to play the game, so I can meet the duration of the challenge
+    * There is an in-game countdown timer that provides 60 seconds to the user to hit as many Power Stations as they can within the time.
+* As a user, I want to beat my score, so I can understand if I'm improving with each turn
+    * At the end of the game the user is informed of their final score and provided with a button to 'Play Again' which navigates them back to the opening screen. A future feature will store the score on a database so a user can see progress over several plays, and also see other users scores.
+* As a user, I want to learn more about Climate Change, so I can understand more about the games theme and improve my own ways of living
+    * The opening page provides an opportunity to learn more about Climate Change through clicking a button on the opening screen. This opens a new browser tab/window to an article on the impacts of burning fossil fuels on the Earths climate.
+* As a user, I want to increase the difficulty, so that I can be more challenged if the default setting becomes too easy
+    * This user story is scheduled to be developed in a future release with a button available to the user on the opening screen that allows them to toggle between Easy and Hard. A boolean function will be added to the existing JavaScript code to increase the speed of the pop-up if the user has selected 'Hard'. This will translate as the false option within the function.
+* As a user, I want to exit the game at any point, so that I can change preferences or have to stop playing
+    * An in-game feature is being developed that will be located within the Header. This will allow the user to click at any point during the 60 seconds to return back to the opening screen.
+* As a user, I want to turn off any music, sounds and effects
+    * A feature is being developed that will allow the user the opportunity to toggle these aspects on or off from either the opening screen or in-game. Due to time constraints this may be scheduled in a future release.
 
 
 ### Issues
