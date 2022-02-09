@@ -28,14 +28,13 @@ let swipe = new Audio('assets/sounds/swipe.wav');
  */
 squares.forEach(square => {
 	square.addEventListener('mousedown', () => {
-		windTurbine.style.transform = 'rotateZ(-50deg) rotateY (-180deg)';
+		windTurbine.style.transform = 'rotateZ(50deg) rotateY(-180deg)';
         swipe.play();
         swipe.currentTime = 0;
         setTimeout(() => {
-            windTurbine.style.transform ='rotateZ(0deg) rotateY(-180deg)';
-        }, 40);
-        
-        if (square.id == hitPosition) {
+            windTurbine.style.transform ='rotateZ(-50deg) rotateY(-180deg)';
+        }, 50);
+		if (square.id == hitPosition) {
 			setTimeout(() => {
 				document.body.classList.toggle('flash');
 			}, 50);
@@ -105,18 +104,4 @@ startButton.addEventListener('click', () => {
 		hitPosition = randomSquare.id;
 	}
 });
-
-// Mute sound and effects button
-/**
- * In-game functionality to stop wave sounds and flash effect when 'Mute' button is clicked
- */
-function mute() {
-	if (swipe.paused) {
-		swipe.pause();
-		swipe.currentTime = 0;
-	} else {
-		swipe.play();
-	}
-};
-
 

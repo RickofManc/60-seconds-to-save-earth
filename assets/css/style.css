@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 2300px;
   height: auto;
   border: none;
   font-family: 'Teko', sans-serif;
@@ -59,8 +58,7 @@ body {
 /* Game intro start button styles */
 .start-button,
 .learn-more-button,
-.exit-game-button,
-.mute-button {
+.exit-game-button {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   background-color: #fff;
@@ -131,7 +129,6 @@ header {
   color: #111d5e;
   user-select: none;
 }
-.mute-button,
 .exit-game-button {
   position: absolute;
   top: 1.25rem;
@@ -142,13 +139,6 @@ header {
   width: 5rem;
   border: 0.15rem solid #111d5e;
   cursor: none;
-}
-.mute-button {
-  top: 5.5rem;
-  right: 1rem;
-}
-.mute-button a:visited {
-  background-color: #c0e218;
 }
 /* Game area styles for the Power Stations to pop-up */
 .game-area-div {
@@ -201,7 +191,6 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(10px, -40px);
-  pointer-events: none;
   cursor: none;
 }
 /* 404 Error page style */
@@ -301,16 +290,11 @@ header {
     margin: 0.15rem;
     font-size: 1.5rem;
   }
-  .mute-button,
   .exit-game-button {
     position: absolute;
     top: 3.25rem;
     padding: 0rem 0.15rem;
     font-size: 1rem;
-  }
-  .mute-button {
-    top: 6rem;
-    right: 1rem;
   }
   /* Game area styles for the Power Stations to pop-up */
   .game-area-div {
@@ -349,7 +333,6 @@ header {
   .wind-turbine {
     height: 80px;
     transform: translate(10px, -40px);
-    pointer-events: none;
   }
   /* 404 Error page style */
   .error-page-header {
@@ -399,7 +382,6 @@ header {
     padding: 0;
     font-size: 1rem;
   }
-  .mute-button,
   .exit-game-button {
     position: absolute;
     padding: 0;
@@ -410,10 +392,6 @@ header {
     font-size: 0.75rem;
     width: 3rem;
   }
-  .mute-button {
-    top: 3.5em;
-    right: 0.5rem;
-  }
   /* Game area styles for the Power Stations to pop-up */
   .game-area-div {
     width: 19.375rem;
@@ -421,19 +399,98 @@ header {
   }
   .grid {
     width: 18.75rem;
-    height: 24.375rem;
+    height: 31rem;
   }
   .square {
     width: 6rem;
-    height: 5rem;
+    height: 6rem;
   }
   .coal {
-    width: 5rem;
-    height: 2.7rem;
     margin: 0;
     padding: 0;
     background: url('../images/power-station-88px.png') no-repeat center;
     pointer-events: all;
     cursor: none;
+  }
+}
+
+/* Styles for large screens over 3500px wide */
+
+@media screen and (min-width: 3500px) {
+  body {
+    width: 3200px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .start-game-screen-div {
+    font-size: 7rem;
+    font-weight: 600;
+    width: 80%;
+  }
+  /* Game intro start button styles */
+  .start-button,
+  .learn-more-button {
+    padding: 0.25rem 0.75rem;
+    margin: 1.5rem 0.5rem;
+    font-size: 7rem;
+    font-weight: 500;
+  }
+  /* In-game page header styles */
+  .game-title {
+    padding: 0.25rem;
+    margin: 0.25rem 1rem;
+    font-size: 7rem;
+  }
+  .score,
+  .time-left {
+    width: 44rem;
+    font-size: 7rem;
+  }
+  .exit-game-button {
+    width: 20rem;
+    top: 1rem;
+    font-size: 5rem;
+  }
+  /* Game area styles for the Power Stations to pop-up */
+  .game-area-div {
+    width: 187.5rem;
+    height: 187.5rem;
+    top: 58%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    align-items: center;
+  }
+  .grid {
+    width: 160rem;
+    height: 160rem;
+  }
+  .square {
+    width: 30rem;
+    height: 30rem;
+    margin: 4rem 4rem;
+    padding: 0;
+  }
+  .coal {
+    width: 28.75rem;
+    height: 24.1875rem;
+    background: url('../images/power-station-460px.png') no-repeat center;
+  }
+  .wind-turbine {
+    height: 24.1875rem;
+    transform: translate(10px, -40px);
+    cursor: none;
+  }
+  /* 404 Error page style */
+  .error-page-header {
+    margin: 0.5rem;
+    letter-spacing: 0;
+  }
+  .error-page-button button {
+    padding: 0.25rem 0.75rem;
+    border: 0.15rem solid #c0e218;
   }
 }

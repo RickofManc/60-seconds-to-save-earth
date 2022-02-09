@@ -26,7 +26,7 @@
     <title>60 Seconds to Save Earth</title>
   </head>
   <body>
-      <!-- Opening screen with game instructions and start button -->
+      <!-- Opening screen with game instructions, start and learn more buttons -->
       <div class="modal">
         <div class="start-game-screen-div">
           <p class="intro-text">
@@ -57,11 +57,11 @@
       </div>
     <!-- Main in-game content container -->
     <div class="in-game-page-div">
-      <!-- In-game page header for Title, Score and Time Left -->
+      <!-- In-game page header for Title, Score, Time Left adn Exit game button  -->
       <header>
         <h1 class="game-title">60 Seconds to Save Earth!</h1>
-        <h2 class="score">Score: <span id="score">0 </span></h2>
-        <h2 class="time-left">Time Left: <span id="time-left">60 </span></h2>
+        <h2 class="score">Score:<span id="score"> 0</span></h2>
+        <h2 class="time-left">Time Left:<span id="time-left"> 60</span></h2>
         <a
           type="text/html"
           class="exit-game-button"
@@ -69,12 +69,6 @@
           href="https://rickofmanc.github.io/60-seconds-to-save-earth/"
           rel="noopener noreferrer"
           >Exit Game</a
-          >
-        <a
-          class="mute-button"
-          aria-label="turn sound and flashes on or off"
-          onclick="mute();"
-          >Mute</a
           >
       </header>
       <!-- In-game grid where the Power Stations pop-up -->
