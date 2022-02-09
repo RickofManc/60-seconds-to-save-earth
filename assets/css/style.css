@@ -159,6 +159,10 @@ header {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  height: 37.5rem;
+  width: 37.5rem;
 }
 .grid {
   width: 34rem;
@@ -177,6 +181,10 @@ header {
 }
 /* Power Station styles */
 .coal {
+  width: 9rem;
+  height: 7.5625rem;
+  margin: 0;
+  padding: 0;
   background: url('../images/power-station-144px.png') no-repeat center;
   pointer-events: all;
   cursor: none;
@@ -306,35 +314,37 @@ header {
   }
   /* Game area styles for the Power Stations to pop-up */
   .game-area-div {
+    width: 25.625rem;
+    height: 34.125rem;
     top: 58%;
     left: 50%;
-    margin: auto;
+    margin: 0;
     transform: translate(-50%, -50%);
     align-items: center;
   }
   .grid {
-    width: 400px;
-    height: 536px;
+    width: 25rem;
+    height: 33.5rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     cursor: pointer;
   }
-  /* Individual grid squares with border removed to reduce user expectancy of pop-up's */
   .square {
-    width: 140px;
-    height: 104px;
-    --border: solid grey 0.25rem;
+    width: 8.75rem;
+    height: 8.75rem;
     margin: 0.15rem 0.25rem;
     padding: 0;
   }
   .coal {
-    padding: 0;
+    width: 7.5rem;
+    height: 6.375rem;
     margin: 0;
-    width: 120px;
-    height: 102px;
+    padding: 0;
     background: url('../images/power-station-120px.png') no-repeat center;
+    pointer-events: all;
+    cursor: none;
   }
   .wind-turbine {
     height: 80px;
@@ -405,17 +415,25 @@ header {
     right: 0.5rem;
   }
   /* Game area styles for the Power Stations to pop-up */
-  .grid {
-    width: 300px;
-    height: 390px;
+  .game-area-div {
+    width: 19.375rem;
+    height: 25rem;
   }
-  /* Individual grid squares with border removed to reduce user expectancy of pop-up's */
+  .grid {
+    width: 18.75rem;
+    height: 24.375rem;
+  }
   .square {
-    width: 130px;
-    height: 70px;
+    width: 6rem;
+    height: 5rem;
   }
   .coal {
-    width: 60px;
-    height: 50px;
+    width: 5rem;
+    height: 2.7rem;
+    margin: 0;
+    padding: 0;
+    background: url('../images/power-station-88px.png') no-repeat center;
+    pointer-events: all;
+    cursor: none;
   }
 }

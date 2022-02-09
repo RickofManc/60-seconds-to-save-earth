@@ -1432,4 +1432,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown
     padding: 0.25rem 0.75rem;
     margin: 0.25rem;
   }
+  .swal2-actions {
+    margin: 0.5rem;
+  }
 }
