@@ -5,7 +5,7 @@ html {
   padding: 0;
 }
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
   height: auto;
@@ -53,7 +53,6 @@ body {
   align-items: center;
   text-align: center;
   user-select: none;
-  cursor: pointer;
 }
 /* Game intro start button styles */
 .start-button,
@@ -64,7 +63,6 @@ body {
   background-color: #fff;
   color: #111d5e;
   border: 0.25rem solid #c0e218;
-  cursor: pointer;
   font-family: 'teko';
   font-size: 2rem;
   font-weight: 500;
@@ -79,6 +77,7 @@ a:hover {
 .modalclose {
   opacity: 0;
   pointer-events: none;
+  cursor: none;
 }
 /* In-game page styles */
 .in-game-page-div {
@@ -94,6 +93,8 @@ a:hover {
   background: url('../images/in-game-background.webp') no-repeat #c70039;
   background-position: top;
   background-size: cover;
+  /*cursor: none;
+  pointer-events: all;*/
 }
 /* In-game page header styles */
 header {
@@ -138,7 +139,6 @@ header {
   text-align: center;
   width: 5rem;
   border: 0.15rem solid #111d5e;
-  cursor: none;
 }
 /* Game area styles for the Power Stations to pop-up */
 .game-area-div {
@@ -153,6 +153,8 @@ header {
   justify-content: center;
   height: 37.5rem;
   width: 37.5rem;
+  /*cursor: none;
+  pointer-events: all;*/
 }
 .grid {
   width: 34rem;
@@ -161,6 +163,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  /*pointer-events: all;*/
 }
 /* Individual grid squares with border removed to reduce user expectancy of pop-up's */
 .square {
@@ -182,14 +185,15 @@ header {
 /* Flash effect that provides user feedback on a successful hit */
 .flash {
   background: #c0e218;
+  position: absolute;
 }
 /* Renewable energy source used to hit power stations */
 .wind-turbine {
   position: absolute;
   z-index: 1000;
   height: 120px;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   transform: translate(10px, -40px);
   cursor: none;
 }
@@ -313,7 +317,6 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
   }
   .square {
     width: 8.75rem;
@@ -331,8 +334,11 @@ header {
     cursor: none;
   }
   .wind-turbine {
+    position: absolute;
+    z-index: 1000;
     height: 80px;
     transform: translate(10px, -40px);
+    /*cursor: none;*/
   }
   /* 404 Error page style */
   .error-page-header {
@@ -419,11 +425,15 @@ header {
 @media screen and (min-width: 3500px) {
   body {
     width: 3200px;
+    margin: 0 auto;
+    padding: 0;
     height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: none;
+    overflow: hidden;
   }
   .start-game-screen-div {
     font-size: 7rem;
@@ -479,10 +489,10 @@ header {
     height: 24.1875rem;
     background: url('../images/power-station-460px.png') no-repeat center;
   }
-  .wind-turbine {
+  /*.wind-turbine {
     height: 24.1875rem;
     transform: translate(10px, -40px);
-    cursor: none;
+    cursor: none;/*
   }
   /* 404 Error page style */
   .error-page-header {

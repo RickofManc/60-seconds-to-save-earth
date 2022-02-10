@@ -27,12 +27,12 @@ let swipe = new Audio('assets/sounds/swipe.wav');
  * User score is incremented by 1
  */
 squares.forEach(square => {
-	square.addEventListener('mousedown', () => {
-		windTurbine.style.transform = 'rotateZ(50deg) rotateY(-180deg)';
+	square.addEventListener('mousedown', (e) => {
+		windTurbine.style.transform = 'rotateZ(-50deg) rotateY(-180deg)';
         swipe.play();
         swipe.currentTime = 0;
         setTimeout(() => {
-            windTurbine.style.transform ='rotateZ(-50deg) rotateY(-180deg)';
+            windTurbine.style.transform ='rotateZ(0deg) rotateY(-180deg)';
         }, 50);
 		if (square.id == hitPosition) {
 			setTimeout(() => {
