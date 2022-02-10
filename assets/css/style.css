@@ -419,7 +419,6 @@ header {
     cursor: none;
   }
 }
-
 /* Styles for large screens over 3500px wide */
 
 @media screen and (min-width: 3500px) {
@@ -489,10 +488,11 @@ header {
     height: 24.1875rem;
     background: url('../images/power-station-460px.png') no-repeat center;
   }
-  /*.wind-turbine {
+  .wind-turbine {
     height: 24.1875rem;
+    width: auto;
     transform: translate(10px, -40px);
-    cursor: none;/*
+    cursor: none;
   }
   /* 404 Error page style */
   .error-page-header {
